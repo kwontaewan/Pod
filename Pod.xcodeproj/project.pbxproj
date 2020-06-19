@@ -25,6 +25,23 @@
 		5B1A4904249C498000F0BFDF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4903249C498000F0BFDF /* BaseViewController.swift */; };
 		5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5B1A4905249C49A600F0BFDF /* .swiftlint.yml */; };
 		5B1A4909249C4D4400F0BFDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B1A4908249C4D4300F0BFDF /* GoogleService-Info.plist */; };
+		5B1A490B249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A490A249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift */; };
+		5B1A490D249C4E0500F0BFDF /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A490C249C4E0500F0BFDF /* ModelType.swift */; };
+		5B1A490F249C4E1600F0BFDF /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A490E249C4E1600F0BFDF /* ViewModelType.swift */; };
+		5B1A4911249C4E9F00F0BFDF /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4910249C4E9F00F0BFDF /* Tag.swift */; };
+		5B1A4913249C4ECC00F0BFDF /* NewsResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4912249C4ECC00F0BFDF /* NewsResponseDTO+Mapping.swift */; };
+		5B1A4915249C4F1B00F0BFDF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4914249C4F1B00F0BFDF /* News.swift */; };
+		5B1A4918249C4FCD00F0BFDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4917249C4FCD00F0BFDF /* MainViewController.swift */; };
+		5B1A491A249C4FDA00F0BFDF /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1A4919249C4FDA00F0BFDF /* MainViewController.storyboard */; };
+		5B1A491C249C527600F0BFDF /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A491B249C527600F0BFDF /* FirestoreRepository.swift */; };
+		5B1A491E249C54A400F0BFDF /* FirestoreDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A491D249C54A400F0BFDF /* FirestoreDAO.swift */; };
+		5B1A4920249C551900F0BFDF /* FirestoreUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A491F249C551900F0BFDF /* FirestoreUseCase.swift */; };
+		5B1A4922249C574B00F0BFDF /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4921249C574B00F0BFDF /* MainFlowCoordinator.swift */; };
+		5B1A4924249C57AF00F0BFDF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4923249C57AF00F0BFDF /* MainViewModel.swift */; };
+		5B1A4926249C5C2A00F0BFDF /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4925249C5C2A00F0BFDF /* AppAppearance.swift */; };
+		5B1A4928249C5CA000F0BFDF /* MainSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4927249C5CA000F0BFDF /* MainSceneDIContainer.swift */; };
+		5B1A492A249C60D200F0BFDF /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4929249C60D200F0BFDF /* AppFlowCoordinator.swift */; };
+		5B1A492C249C610100F0BFDF /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A492B249C610100F0BFDF /* AppDIContainer.swift */; };
 		E336CC56FC3552D4CB4C97EB /* Pods_PodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBBAF237CD3ED67C11D3133 /* Pods_PodTests.framework */; };
 		FCC497AF94E1E5FE5A92F5D5 /* Pods_Pod_PodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087C918D480B507A198B266 /* Pods_Pod_PodUITests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +90,23 @@
 		5B1A4903249C498000F0BFDF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5B1A4905249C49A600F0BFDF /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		5B1A4908249C4D4300F0BFDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B1A490A249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TagResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		5B1A490C249C4E0500F0BFDF /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		5B1A490E249C4E1600F0BFDF /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		5B1A4910249C4E9F00F0BFDF /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		5B1A4912249C4ECC00F0BFDF /* NewsResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		5B1A4914249C4F1B00F0BFDF /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		5B1A4917249C4FCD00F0BFDF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5B1A4919249C4FDA00F0BFDF /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		5B1A491B249C527600F0BFDF /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
+		5B1A491D249C54A400F0BFDF /* FirestoreDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDAO.swift; sourceTree = "<group>"; };
+		5B1A491F249C551900F0BFDF /* FirestoreUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUseCase.swift; sourceTree = "<group>"; };
+		5B1A4921249C574B00F0BFDF /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
+		5B1A4923249C57AF00F0BFDF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5B1A4925249C5C2A00F0BFDF /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		5B1A4927249C5CA000F0BFDF /* MainSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDIContainer.swift; sourceTree = "<group>"; };
+		5B1A4929249C60D200F0BFDF /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		5B1A492B249C610100F0BFDF /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		7EB9474B08233DB18A6F272E /* Pods-Pod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod.debug.xcconfig"; path = "Target Support Files/Pods-Pod/Pods-Pod.debug.xcconfig"; sourceTree = "<group>"; };
 		A014B854F65D3CAEC75E3E07 /* Pods-Pod-PodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod-PodUITests.release.xcconfig"; path = "Target Support Files/Pods-Pod-PodUITests/Pods-Pod-PodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B72958B7C6025FF483E17A11 /* Pods-Pod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod.release.xcconfig"; path = "Target Support Files/Pods-Pod/Pods-Pod.release.xcconfig"; sourceTree = "<group>"; };
@@ -237,8 +271,11 @@
 			isa = PBXGroup;
 			children = (
 				5B1A48AB249C3C3800F0BFDF /* AppDelegate.swift */,
-				5B1A48F1249C46C000F0BFDF /* Utils */,
+				5B1A4925249C5C2A00F0BFDF /* AppAppearance.swift */,
+				5B1A4929249C60D200F0BFDF /* AppFlowCoordinator.swift */,
+				5B1A492B249C610100F0BFDF /* AppDIContainer.swift */,
 				5B1A48F0249C46B400F0BFDF /* DIcontainer */,
+				5B1A48F1249C46C000F0BFDF /* Utils */,
 				5B1A48EF249C46AD00F0BFDF /* Common */,
 			);
 			path = Application;
@@ -247,6 +284,8 @@
 		5B1A48E5249C460000F0BFDF /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A490A249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift */,
+				5B1A4912249C4ECC00F0BFDF /* NewsResponseDTO+Mapping.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -254,6 +293,7 @@
 		5B1A48E6249C461000F0BFDF /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A491D249C54A400F0BFDF /* FirestoreDAO.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -268,6 +308,7 @@
 		5B1A48E8249C463800F0BFDF /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A491B249C527600F0BFDF /* FirestoreRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -275,6 +316,7 @@
 		5B1A48E9249C464300F0BFDF /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A491F249C551900F0BFDF /* FirestoreUseCase.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -282,6 +324,8 @@
 		5B1A48EA249C464D00F0BFDF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A4910249C4E9F00F0BFDF /* Tag.swift */,
+				5B1A4914249C4F1B00F0BFDF /* News.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -299,6 +343,8 @@
 		5B1A48EC249C467C00F0BFDF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A4917249C4FCD00F0BFDF /* MainViewController.swift */,
+				5B1A4919249C4FDA00F0BFDF /* MainViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +352,7 @@
 		5B1A48ED249C468E00F0BFDF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A4923249C57AF00F0BFDF /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -313,6 +360,7 @@
 		5B1A48EE249C469700F0BFDF /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A4921249C574B00F0BFDF /* MainFlowCoordinator.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -320,6 +368,8 @@
 		5B1A48EF249C46AD00F0BFDF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A490C249C4E0500F0BFDF /* ModelType.swift */,
+				5B1A490E249C4E1600F0BFDF /* ViewModelType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -327,6 +377,7 @@
 		5B1A48F0249C46B400F0BFDF /* DIcontainer */ = {
 			isa = PBXGroup;
 			children = (
+				5B1A4927249C5CA000F0BFDF /* MainSceneDIContainer.swift */,
 			);
 			path = DIcontainer;
 			sourceTree = "<group>";
@@ -466,6 +517,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1A491A249C4FDA00F0BFDF /* MainViewController.storyboard in Resources */,
 				5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */,
 				5B1A4909249C4D4400F0BFDF /* GoogleService-Info.plist in Resources */,
 				5B1A48B8249C3C3A00F0BFDF /* LaunchScreen.storyboard in Resources */,
@@ -633,14 +685,30 @@
 			files = (
 				5B1A48FA249C48DA00F0BFDF /* UIImageView+Kingfisher.swift in Sources */,
 				5B1A48FC249C490B00F0BFDF /* DetectDeinit.swift in Sources */,
+				5B1A4913249C4ECC00F0BFDF /* NewsResponseDTO+Mapping.swift in Sources */,
 				5B1A4904249C498000F0BFDF /* BaseViewController.swift in Sources */,
+				5B1A491C249C527600F0BFDF /* FirestoreRepository.swift in Sources */,
+				5B1A4922249C574B00F0BFDF /* MainFlowCoordinator.swift in Sources */,
 				5B1A48F4249C479E00F0BFDF /* Alertable.swift in Sources */,
+				5B1A490B249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift in Sources */,
+				5B1A492C249C610100F0BFDF /* AppDIContainer.swift in Sources */,
 				5B1A48AC249C3C3800F0BFDF /* AppDelegate.swift in Sources */,
+				5B1A490F249C4E1600F0BFDF /* ViewModelType.swift in Sources */,
 				5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */,
+				5B1A4920249C551900F0BFDF /* FirestoreUseCase.swift in Sources */,
 				5B1A4900249C494500F0BFDF /* ErrorTracker.swift in Sources */,
 				5B1A48FE249C492100F0BFDF /* ActivityIndicator.swift in Sources */,
+				5B1A492A249C60D200F0BFDF /* AppFlowCoordinator.swift in Sources */,
 				5B1A48F6249C47B500F0BFDF /* StoryboardInstantiable.swift in Sources */,
+				5B1A4926249C5C2A00F0BFDF /* AppAppearance.swift in Sources */,
 				5B1A48E4249C45E600F0BFDF /* Logger.swift in Sources */,
+				5B1A4928249C5CA000F0BFDF /* MainSceneDIContainer.swift in Sources */,
+				5B1A4911249C4E9F00F0BFDF /* Tag.swift in Sources */,
+				5B1A490D249C4E0500F0BFDF /* ModelType.swift in Sources */,
+				5B1A491E249C54A400F0BFDF /* FirestoreDAO.swift in Sources */,
+				5B1A4918249C4FCD00F0BFDF /* MainViewController.swift in Sources */,
+				5B1A4915249C4F1B00F0BFDF /* News.swift in Sources */,
+				5B1A4924249C57AF00F0BFDF /* MainViewModel.swift in Sources */,
 				5B1A48F8249C48A100F0BFDF /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

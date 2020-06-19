@@ -12,24 +12,28 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let appDIContainer = AppDIContainer()
+    var appFlowCoordinator: AppFlowCoordinator?
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        AppAppearance.setupAppearance()
         FirebaseApp.configure()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let vc = UIViewController()
-        
-        vc.view.backgroundColor = .white
-        
-        let mainNavigaitonController = UINavigationController(rootViewController: vc)
+        let mainNavigaitonController = UINavigationController()
         
         mainNavigaitonController.tabBarItem = UITabBarItem(
             title: "Main",
             image: nil,
             selectedImage: nil
+        )
+        
+        appFlowCoordinator = AppFlowCoordinator(
+            mainNavigationController: mainNavigaitonController,
+            appDIContainer: appDIContainer
         )
         
         let tabarController = UITabBarController()
@@ -39,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         
         window?.rootViewController = tabarController
+        
+        appFlowCoordinator?.startMain()
         window?.makeKeyAndVisible()
         
         return true
