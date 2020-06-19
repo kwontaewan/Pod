@@ -38,6 +38,9 @@ target 'Pod' do
   pod 'Firebase/Analytics'
   pod 'RxFirebase/Firestore'
   pod 'Firebase/Firestore'
+  
+  #UI
+  pod 'ZLSwipeableViewSwift'
 
   target 'PodTests' do
     inherit! :search_paths
