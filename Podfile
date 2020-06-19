@@ -40,7 +40,7 @@ target 'Pod' do
   pod 'Firebase/Firestore'
   
   #UI
-  pod 'ZLSwipeableViewSwift'
+  pod "Koloda"
 
   target 'PodTests' do
     inherit! :search_paths
