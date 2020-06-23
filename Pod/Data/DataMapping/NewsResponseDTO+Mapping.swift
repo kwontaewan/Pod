@@ -19,9 +19,13 @@ struct NewsResponseDTO {
     let imageUrl: String
        
     let link: String
+    
+    let originLink: String
        
     let pubDate: String
-       
+    
+    let registerDateTime: String
+           
     let tags: [String]
        
     init(documentID: String,
@@ -32,7 +36,9 @@ struct NewsResponseDTO {
         self.description = dic["description"] as? String ?? ""
         self.imageUrl = dic["imageUrl"] as? String ?? ""
         self.link = dic["link"] as? String ?? ""
+        self.originLink = dic["originLink"] as? String ?? ""
         self.pubDate = dic["pubDate"] as? String ?? ""
+        self.registerDateTime = dic["registerDateTime"] as? String ?? ""
         self.tags = dic["tags"] as? [String] ?? []
     }
     
@@ -47,7 +53,9 @@ extension NewsResponseDTO {
             description: description,
             imageUrl: imageUrl,
             link: link,
+            originLink: originLink,
             pubDate: pubDate,
+            registerDateTime: registerDateTime,
             tags: tags
         )
     }

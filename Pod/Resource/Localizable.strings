@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Pod
+
+  Created by Gunter on 2020/06/23.
+  Copyright © 2020 Gunter. All rights reserved.
+*/
+second = "초 전";
+minute = "분 전";
+hour = "시간 전";
+day = "일 전";
+month = "달 전";
+year = "년 전";

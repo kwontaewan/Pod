@@ -42,10 +42,14 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="UGb-xi-ug2">
-                                    <rect key="frame" x="20" y="681.66666666666663" width="173.33333333333334" height="14.333333333333371"/>
+                                    <rect key="frame" x="20" y="681.66666666666663" width="374" height="14.333333333333371"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nownews.seoul.co.kr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivw-3D-UYe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="nownews.seoul.co.kr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivw-3D-UYe">
                                             <rect key="frame" x="0.0" y="0.0" width="118" height="14.333333333333334"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="170" id="0av-um-Nxh"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="kN5-po-tf4"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -59,7 +63,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9시간 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-CI-x1w">
-                                            <rect key="frame" x="131" y="0.0" width="42.333333333333343" height="14.333333333333334"/>
+                                            <rect key="frame" x="131" y="0.0" width="243" height="14.333333333333334"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -73,10 +77,10 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3j2-HU-OiA" customClass="BorderUIView" customModule="Pod" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="592.33333333333337" width="48" height="20"/>
+                                    <rect key="frame" x="19.999999999999996" y="592.33333333333337" width="37.666666666666657" height="20"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이폰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oa8-aP-6Rg">
-                                            <rect key="frame" x="8.3333333333333339" y="3.0000000000000009" width="31.333333333333329" height="14.333333333333336"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oa8-aP-6Rg">
+                                            <rect key="frame" x="8.3333333333333321" y="3.0000000000000009" width="21" height="14.333333333333336"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                             <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -87,12 +91,13 @@
                                         <constraint firstItem="Oa8-aP-6Rg" firstAttribute="leading" secondItem="3j2-HU-OiA" secondAttribute="leading" constant="8.3300000000000001" id="3c0-DU-iY8"/>
                                         <constraint firstAttribute="trailing" secondItem="Oa8-aP-6Rg" secondAttribute="trailing" constant="8.3300000000000001" id="BVx-cO-nN4"/>
                                         <constraint firstAttribute="height" constant="20" id="PtT-K8-n4g"/>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="aYA-ao-3hU"/>
+                                        <constraint firstItem="Oa8-aP-6Rg" firstAttribute="centerX" secondItem="3j2-HU-OiA" secondAttribute="centerX" id="mNn-xO-zvn"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37.670000000000002" id="pSz-m5-Jtt"/>
                                         <constraint firstItem="Oa8-aP-6Rg" firstAttribute="centerY" secondItem="3j2-HU-OiA" secondAttribute="centerY" id="zUG-Oy-pTR"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="11"/>
+                                            <real key="value" value="10"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
@@ -104,6 +109,7 @@
                                 <constraint firstItem="pDW-9g-Bko" firstAttribute="top" secondItem="3j2-HU-OiA" secondAttribute="bottom" constant="8" id="NH0-JL-a3T"/>
                                 <constraint firstAttribute="bottom" secondItem="UGb-xi-ug2" secondAttribute="bottom" constant="40" id="QeP-ex-qHK"/>
                                 <constraint firstItem="UGb-xi-ug2" firstAttribute="leading" secondItem="8c6-SY-iPL" secondAttribute="leading" constant="20" id="Zqg-i4-4qV"/>
+                                <constraint firstAttribute="trailing" secondItem="UGb-xi-ug2" secondAttribute="trailing" constant="20" id="byp-wL-Fdo"/>
                                 <constraint firstAttribute="trailing" secondItem="pDW-9g-Bko" secondAttribute="trailing" constant="20" id="i2I-dA-gNr"/>
                                 <constraint firstItem="UGb-xi-ug2" firstAttribute="top" secondItem="pDW-9g-Bko" secondAttribute="bottom" constant="4" id="kDu-iQ-a1G"/>
                             </constraints>

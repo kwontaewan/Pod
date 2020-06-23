@@ -76,6 +76,7 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
         
         swipeCardView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         swipeCardView.countOfVisibleCards = kolodaCountOfVisibleCards
+        swipeCardView.appearanceAnimationDuration = TimeInterval(0.5)
         swipeCardView.swipe(.left)
         swipeCardView.swipe(.right)
         swipeCardView.delegate = self
@@ -201,7 +202,7 @@ extension MainViewController: KolodaViewDataSource {
         }
         
         newsCardView.titleLabel.text = news.title
-        //newsCardView.linkLabel.text = news.link
+        newsCardView.linkLabel.text = news.link
         newsCardView.tagLabel.text = news.tag
         newsCardView.newsImageView.setImage(with: news.imageUrl)
         

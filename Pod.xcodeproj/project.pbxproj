@@ -50,6 +50,8 @@
 		5BF131F424A1A40600E1D94B /* CustomGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131F324A1A40600E1D94B /* CustomGradientView.swift */; };
 		5BF131F624A2116200E1D94B /* RxKolodaDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131F524A2116200E1D94B /* RxKolodaDelegateProxy.swift */; };
 		5BF131F824A213C100E1D94B /* MainNewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131F724A213C100E1D94B /* MainNewsListViewModel.swift */; };
+		5BF131FA24A231CB00E1D94B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131F924A231CA00E1D94B /* String+Ext.swift */; };
+		5BF131FC24A2326300E1D94B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF131FB24A2326300E1D94B /* Localizable.strings */; };
 		E336CC56FC3552D4CB4C97EB /* Pods_PodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBBAF237CD3ED67C11D3133 /* Pods_PodTests.framework */; };
 		FCC497AF94E1E5FE5A92F5D5 /* Pods_Pod_PodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087C918D480B507A198B266 /* Pods_Pod_PodUITests.framework */; };
 /* End PBXBuildFile section */
@@ -123,6 +125,8 @@
 		5BF131F324A1A40600E1D94B /* CustomGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGradientView.swift; sourceTree = "<group>"; };
 		5BF131F524A2116200E1D94B /* RxKolodaDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxKolodaDelegateProxy.swift; sourceTree = "<group>"; };
 		5BF131F724A213C100E1D94B /* MainNewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsListViewModel.swift; sourceTree = "<group>"; };
+		5BF131F924A231CA00E1D94B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		5BF131FB24A2326300E1D94B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7EB9474B08233DB18A6F272E /* Pods-Pod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod.debug.xcconfig"; path = "Target Support Files/Pods-Pod/Pods-Pod.debug.xcconfig"; sourceTree = "<group>"; };
 		A014B854F65D3CAEC75E3E07 /* Pods-Pod-PodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod-PodUITests.release.xcconfig"; path = "Target Support Files/Pods-Pod-PodUITests/Pods-Pod-PodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B72958B7C6025FF483E17A11 /* Pods-Pod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pod.release.xcconfig"; path = "Target Support Files/Pods-Pod/Pods-Pod.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 				5B1A48B4249C3C3A00F0BFDF /* Assets.xcassets */,
 				5B1A48B6249C3C3A00F0BFDF /* LaunchScreen.storyboard */,
 				5B1A48B9249C3C3A00F0BFDF /* Info.plist */,
+				5BF131FB24A2326300E1D94B /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				5BF131F124A1A32A00E1D94B /* BorderUIView.swift */,
 				5BF131F324A1A40600E1D94B /* CustomGradientView.swift */,
 				5BF131F524A2116200E1D94B /* RxKolodaDelegateProxy.swift */,
+				5BF131F924A231CA00E1D94B /* String+Ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -552,6 +558,7 @@
 				5B1A491A249C4FDA00F0BFDF /* MainViewController.storyboard in Resources */,
 				5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */,
 				5B1A4909249C4D4400F0BFDF /* GoogleService-Info.plist in Resources */,
+				5BF131FC24A2326300E1D94B /* Localizable.strings in Resources */,
 				5B1A48B8249C3C3A00F0BFDF /* LaunchScreen.storyboard in Resources */,
 				5B1A48B5249C3C3A00F0BFDF /* Assets.xcassets in Resources */,
 				5BF131EE24A1A28D00E1D94B /* NewsCardView.xib in Resources */,
@@ -724,6 +731,7 @@
 				5B1A491C249C527600F0BFDF /* FirestoreRepository.swift in Sources */,
 				5B1A4922249C574B00F0BFDF /* MainFlowCoordinator.swift in Sources */,
 				5B1A48F4249C479E00F0BFDF /* Alertable.swift in Sources */,
+				5BF131FA24A231CB00E1D94B /* String+Ext.swift in Sources */,
 				5BF131F824A213C100E1D94B /* MainNewsListViewModel.swift in Sources */,
 				5B1A490B249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift in Sources */,
 				5B1A492C249C610100F0BFDF /* AppDIContainer.swift in Sources */,
