@@ -7,7 +7,7 @@
 //
 
 import RxFirebase
-import Firebase
+import FirebaseFirestore
 import RxSwift
 
 final class FirestoreDAO: DetectDeinit, FirestoreRepository {
