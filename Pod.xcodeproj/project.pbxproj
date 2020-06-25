@@ -42,6 +42,8 @@
 		5B1A4928249C5CA000F0BFDF /* MainSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4927249C5CA000F0BFDF /* MainSceneDIContainer.swift */; };
 		5B1A492A249C60D200F0BFDF /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4929249C60D200F0BFDF /* AppFlowCoordinator.swift */; };
 		5B1A492C249C610100F0BFDF /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A492B249C610100F0BFDF /* AppDIContainer.swift */; };
+		5B64CF0D24A47E9A0074FEF7 /* GestureIntroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B64CF0C24A47E9A0074FEF7 /* GestureIntroViewController.storyboard */; };
+		5B64CF1024A47EC00074FEF7 /* GestureIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF0F24A47EC00074FEF7 /* GestureIntroViewController.swift */; };
 		5BF131E824A192E700E1D94B /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E724A192E700E1D94B /* TagCell.swift */; };
 		5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E924A1A21500E1D94B /* UIView+Ext.swift */; };
 		5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131EB24A1A28300E1D94B /* NewsCardView.swift */; };
@@ -117,6 +119,8 @@
 		5B1A4927249C5CA000F0BFDF /* MainSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDIContainer.swift; sourceTree = "<group>"; };
 		5B1A4929249C60D200F0BFDF /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		5B1A492B249C610100F0BFDF /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		5B64CF0C24A47E9A0074FEF7 /* GestureIntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GestureIntroViewController.storyboard; sourceTree = "<group>"; };
+		5B64CF0F24A47EC00074FEF7 /* GestureIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureIntroViewController.swift; sourceTree = "<group>"; };
 		5B6AA33324A2D8190075EAB8 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
 		5BF131E724A192E700E1D94B /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		5BF131E924A1A21500E1D94B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -366,6 +370,7 @@
 		5B1A48EC249C467C00F0BFDF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CF0E24A47EA20074FEF7 /* GestureIntro */,
 				5BF131E624A192CE00E1D94B /* Cells */,
 				5B1A4917249C4FCD00F0BFDF /* MainViewController.swift */,
 				5B1A4919249C4FDA00F0BFDF /* MainViewController.storyboard */,
@@ -436,6 +441,15 @@
 				5B1A48F5249C47B500F0BFDF /* StoryboardInstantiable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5B64CF0E24A47EA20074FEF7 /* GestureIntro */ = {
+			isa = PBXGroup;
+			children = (
+				5B64CF0C24A47E9A0074FEF7 /* GestureIntroViewController.storyboard */,
+				5B64CF0F24A47EC00074FEF7 /* GestureIntroViewController.swift */,
+			);
+			path = GestureIntro;
 			sourceTree = "<group>";
 		};
 		5BF131E624A192CE00E1D94B /* Cells */ = {
@@ -563,6 +577,7 @@
 				5BF131FC24A2326300E1D94B /* Localizable.strings in Resources */,
 				5B1A48B8249C3C3A00F0BFDF /* LaunchScreen.storyboard in Resources */,
 				5B1A48B5249C3C3A00F0BFDF /* Assets.xcassets in Resources */,
+				5B64CF0D24A47E9A0074FEF7 /* GestureIntroViewController.storyboard in Resources */,
 				5BF131EE24A1A28D00E1D94B /* NewsCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,6 +754,7 @@
 				5B1A492C249C610100F0BFDF /* AppDIContainer.swift in Sources */,
 				5B1A48AC249C3C3800F0BFDF /* AppDelegate.swift in Sources */,
 				5B1A490F249C4E1600F0BFDF /* ViewModelType.swift in Sources */,
+				5B64CF1024A47EC00074FEF7 /* GestureIntroViewController.swift in Sources */,
 				5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */,
 				5B1A4920249C551900F0BFDF /* FirestoreUseCase.swift in Sources */,
 				5B1A4900249C494500F0BFDF /* ErrorTracker.swift in Sources */,
