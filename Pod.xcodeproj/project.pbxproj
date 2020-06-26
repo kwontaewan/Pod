@@ -48,6 +48,10 @@
 		5B64CF1424A581690074FEF7 /* UserDefaultsManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1324A581690074FEF7 /* UserDefaultsManagement.swift */; };
 		5B64CF1624A587540074FEF7 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1524A587540074FEF7 /* UILabel+Ext.swift */; };
 		5B64CF1824A58BC10074FEF7 /* UIViewController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1724A58BC10074FEF7 /* UIViewController+StatusBar.swift */; };
+		5B64CF1E24A591900074FEF7 /* NewsDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1D24A591900074FEF7 /* NewsDetailCoordinator.swift */; };
+		5B64CF2024A591A00074FEF7 /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1F24A591A00074FEF7 /* NewsDetailViewModel.swift */; };
+		5B64CF2224A591C70074FEF7 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF2124A591C70074FEF7 /* NewsDetailViewController.swift */; };
+		5B64CF2424A591CF0074FEF7 /* NewsDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B64CF2324A591CF0074FEF7 /* NewsDetailViewController.storyboard */; };
 		5BF131E824A192E700E1D94B /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E724A192E700E1D94B /* TagCell.swift */; };
 		5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E924A1A21500E1D94B /* UIView+Ext.swift */; };
 		5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131EB24A1A28300E1D94B /* NewsCardView.swift */; };
@@ -129,6 +133,10 @@
 		5B64CF1324A581690074FEF7 /* UserDefaultsManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagement.swift; sourceTree = "<group>"; };
 		5B64CF1524A587540074FEF7 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		5B64CF1724A58BC10074FEF7 /* UIViewController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StatusBar.swift"; sourceTree = "<group>"; };
+		5B64CF1D24A591900074FEF7 /* NewsDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailCoordinator.swift; sourceTree = "<group>"; };
+		5B64CF1F24A591A00074FEF7 /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
+		5B64CF2124A591C70074FEF7 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		5B64CF2324A591CF0074FEF7 /* NewsDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsDetailViewController.storyboard; sourceTree = "<group>"; };
 		5B6AA33324A2D8190075EAB8 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
 		5BF131E724A192E700E1D94B /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		5BF131E924A1A21500E1D94B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -297,6 +305,7 @@
 		5B1A48DF249C44A500F0BFDF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CF1924A590800074FEF7 /* NewsDetailScene */,
 				5B1A48EB249C466900F0BFDF /* MainScene */,
 			);
 			path = Presentation;
@@ -464,6 +473,41 @@
 			path = GestureIntro;
 			sourceTree = "<group>";
 		};
+		5B64CF1924A590800074FEF7 /* NewsDetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				5B64CF1C24A590980074FEF7 /* Flow */,
+				5B64CF1B24A590930074FEF7 /* ViewModel */,
+				5B64CF1A24A5908D0074FEF7 /* View */,
+			);
+			path = NewsDetailScene;
+			sourceTree = "<group>";
+		};
+		5B64CF1A24A5908D0074FEF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B64CF2124A591C70074FEF7 /* NewsDetailViewController.swift */,
+				5B64CF2324A591CF0074FEF7 /* NewsDetailViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B64CF1B24A590930074FEF7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B64CF1F24A591A00074FEF7 /* NewsDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5B64CF1C24A590980074FEF7 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				5B64CF1D24A591900074FEF7 /* NewsDetailCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
 		5BF131E624A192CE00E1D94B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +627,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B64CF2424A591CF0074FEF7 /* NewsDetailViewController.storyboard in Resources */,
 				5B1A491A249C4FDA00F0BFDF /* MainViewController.storyboard in Resources */,
 				5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */,
 				5B1A4909249C4D4400F0BFDF /* GoogleService-Info.plist in Resources */,
@@ -752,6 +797,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B64CF2024A591A00074FEF7 /* NewsDetailViewModel.swift in Sources */,
 				5BF131E824A192E700E1D94B /* TagCell.swift in Sources */,
 				5B1A48FA249C48DA00F0BFDF /* UIImageView+Kingfisher.swift in Sources */,
 				5B1A48FC249C490B00F0BFDF /* DetectDeinit.swift in Sources */,
@@ -761,6 +807,7 @@
 				5B1A4922249C574B00F0BFDF /* MainFlowCoordinator.swift in Sources */,
 				5B1A48F4249C479E00F0BFDF /* Alertable.swift in Sources */,
 				5BF131FA24A231CB00E1D94B /* String+Ext.swift in Sources */,
+				5B64CF1E24A591900074FEF7 /* NewsDetailCoordinator.swift in Sources */,
 				5BF131F824A213C100E1D94B /* MainNewsListViewModel.swift in Sources */,
 				5B1A490B249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift in Sources */,
 				5B1A492C249C610100F0BFDF /* AppDIContainer.swift in Sources */,
@@ -777,6 +824,7 @@
 				5B1A48FE249C492100F0BFDF /* ActivityIndicator.swift in Sources */,
 				5B1A492A249C60D200F0BFDF /* AppFlowCoordinator.swift in Sources */,
 				5B1A48F6249C47B500F0BFDF /* StoryboardInstantiable.swift in Sources */,
+				5B64CF2224A591C70074FEF7 /* NewsDetailViewController.swift in Sources */,
 				5BF131F224A1A32A00E1D94B /* BorderUIView.swift in Sources */,
 				5B1A4926249C5C2A00F0BFDF /* AppAppearance.swift in Sources */,
 				5B1A48E4249C45E600F0BFDF /* Logger.swift in Sources */,

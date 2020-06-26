@@ -17,7 +17,6 @@ final class MainSceneDIContainer {
     }
     
     // MARK: - Repositories
-    
     func makeFirestoreRepository() -> FirestoreRepository {
         return FirestoreDAO(db: Firestore.firestore())
     }
