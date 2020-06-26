@@ -30,6 +30,10 @@ final class MainSceneDIContainer {
         return MainViewModel(firestoreUseCases: makeFirestoreUseCase(), coordinator: coordinator)
     }
     
+    func makeGestureIntroViewController() -> GestureIntroViewController {
+        return GestureIntroViewController.create()
+    }
+    
     // MARK: - Flow Coordinators
     func makeMainFlowCoordinator(
         navigationController: UINavigationController

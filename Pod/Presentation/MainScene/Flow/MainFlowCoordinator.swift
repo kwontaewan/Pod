@@ -14,6 +14,8 @@ protocol MainFlowCoordinatorDependencies {
         coordinator: MainFlowCoordinator
     ) -> MainViewController
     
+    func makeGestureIntroViewController() -> GestureIntroViewController
+    
 }
 
 protocol MainFlowCoordinator {
@@ -27,7 +29,7 @@ protocol MainFlowCoordinator {
 class DefaultMainFlowCoordinator: DetectDeinit, MainFlowCoordinator {
     
     private let navigationController: UINavigationController
-    
+        
     private let dependencies: MainFlowCoordinatorDependencies
     
     init(
@@ -44,7 +46,9 @@ class DefaultMainFlowCoordinator: DetectDeinit, MainFlowCoordinator {
     }
     
     func presentGuideView() {
-        
+        let vc = dependencies.makeGestureIntroViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        navigationController.present(vc, animated: false, completion: nil)
     }
     
 }

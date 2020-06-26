@@ -67,13 +67,13 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
     }
     
     private func initView() {
-        
+        self.setNeedsStatusBarAppearanceUpdate()
+
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
          }
         
         navigationController?.navigationBar.isHidden = true
-        
         swipeCardView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         swipeCardView.countOfVisibleCards = kolodaCountOfVisibleCards
         swipeCardView.appearanceAnimationDuration = TimeInterval(0.5)
@@ -134,9 +134,13 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
                 self?.swipeCardView.resetCurrentCardIndex()
                 self?.swipeCardView.reloadData()
             }).disposed(by: disposeBag)
+        
+        output.showIntro
+            .drive()
+            .disposed(by: disposeBag)
                 
     }
-    
+        
 }
 
 // MARK: KolodaViewDelegate

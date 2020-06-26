@@ -25,6 +25,8 @@ final class MainViewModel: DetectDeinit, ViewModelType {
         let tags: Driver<[Tag]>
         
         let news: Observable<[MainNewsListViewModel]>
+        
+        let showIntro: Driver<Void>
                 
     }
     
@@ -55,7 +57,15 @@ final class MainViewModel: DetectDeinit, ViewModelType {
                 .map { $0.map { MainNewsListViewModel(with: $0) } }
         }
         
-        return Output(tags: tags, news: news)
+        let showIntro = input.viewDidAppear
+            .map { _ in Void() }
+            .filter { (_) -> Bool in
+                return !UserDefaultsManagement.getSkipIntro()
+            }.do(onNext: { [weak self] _ in
+                self?.coordinator.presentGuideView()
+            })
+        
+        return Output(tags: tags, news: news, showIntro: showIntro)
     }
     
 }

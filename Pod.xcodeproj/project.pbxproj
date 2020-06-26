@@ -44,6 +44,10 @@
 		5B1A492C249C610100F0BFDF /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A492B249C610100F0BFDF /* AppDIContainer.swift */; };
 		5B64CF0D24A47E9A0074FEF7 /* GestureIntroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B64CF0C24A47E9A0074FEF7 /* GestureIntroViewController.storyboard */; };
 		5B64CF1024A47EC00074FEF7 /* GestureIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF0F24A47EC00074FEF7 /* GestureIntroViewController.swift */; };
+		5B64CF1224A57C270074FEF7 /* BorderUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1124A57C270074FEF7 /* BorderUIButton.swift */; };
+		5B64CF1424A581690074FEF7 /* UserDefaultsManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1324A581690074FEF7 /* UserDefaultsManagement.swift */; };
+		5B64CF1624A587540074FEF7 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1524A587540074FEF7 /* UILabel+Ext.swift */; };
+		5B64CF1824A58BC10074FEF7 /* UIViewController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF1724A58BC10074FEF7 /* UIViewController+StatusBar.swift */; };
 		5BF131E824A192E700E1D94B /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E724A192E700E1D94B /* TagCell.swift */; };
 		5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E924A1A21500E1D94B /* UIView+Ext.swift */; };
 		5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131EB24A1A28300E1D94B /* NewsCardView.swift */; };
@@ -121,6 +125,10 @@
 		5B1A492B249C610100F0BFDF /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		5B64CF0C24A47E9A0074FEF7 /* GestureIntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GestureIntroViewController.storyboard; sourceTree = "<group>"; };
 		5B64CF0F24A47EC00074FEF7 /* GestureIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureIntroViewController.swift; sourceTree = "<group>"; };
+		5B64CF1124A57C270074FEF7 /* BorderUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderUIButton.swift; sourceTree = "<group>"; };
+		5B64CF1324A581690074FEF7 /* UserDefaultsManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagement.swift; sourceTree = "<group>"; };
+		5B64CF1524A587540074FEF7 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		5B64CF1724A58BC10074FEF7 /* UIViewController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StatusBar.swift"; sourceTree = "<group>"; };
 		5B6AA33324A2D8190075EAB8 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
 		5BF131E724A192E700E1D94B /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		5BF131E924A1A21500E1D94B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -430,6 +438,10 @@
 				5BF131F324A1A40600E1D94B /* CustomGradientView.swift */,
 				5BF131F524A2116200E1D94B /* RxKolodaDelegateProxy.swift */,
 				5BF131F924A231CA00E1D94B /* String+Ext.swift */,
+				5B64CF1124A57C270074FEF7 /* BorderUIButton.swift */,
+				5B64CF1324A581690074FEF7 /* UserDefaultsManagement.swift */,
+				5B64CF1524A587540074FEF7 /* UILabel+Ext.swift */,
+				5B64CF1724A58BC10074FEF7 /* UIViewController+StatusBar.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -756,9 +768,11 @@
 				5B1A490F249C4E1600F0BFDF /* ViewModelType.swift in Sources */,
 				5B64CF1024A47EC00074FEF7 /* GestureIntroViewController.swift in Sources */,
 				5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */,
+				5B64CF1824A58BC10074FEF7 /* UIViewController+StatusBar.swift in Sources */,
 				5B1A4920249C551900F0BFDF /* FirestoreUseCase.swift in Sources */,
 				5B1A4900249C494500F0BFDF /* ErrorTracker.swift in Sources */,
 				5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */,
+				5B64CF1224A57C270074FEF7 /* BorderUIButton.swift in Sources */,
 				5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */,
 				5B1A48FE249C492100F0BFDF /* ActivityIndicator.swift in Sources */,
 				5B1A492A249C60D200F0BFDF /* AppFlowCoordinator.swift in Sources */,
@@ -768,10 +782,12 @@
 				5B1A48E4249C45E600F0BFDF /* Logger.swift in Sources */,
 				5BF131F424A1A40600E1D94B /* CustomGradientView.swift in Sources */,
 				5B1A4928249C5CA000F0BFDF /* MainSceneDIContainer.swift in Sources */,
+				5B64CF1424A581690074FEF7 /* UserDefaultsManagement.swift in Sources */,
 				5B1A4911249C4E9F00F0BFDF /* Tag.swift in Sources */,
 				5B1A490D249C4E0500F0BFDF /* ModelType.swift in Sources */,
 				5B1A491E249C54A400F0BFDF /* FirestoreDAO.swift in Sources */,
 				5B1A4918249C4FCD00F0BFDF /* MainViewController.swift in Sources */,
+				5B64CF1624A587540074FEF7 /* UILabel+Ext.swift in Sources */,
 				5B1A4915249C4F1B00F0BFDF /* News.swift in Sources */,
 				5B1A4924249C57AF00F0BFDF /* MainViewModel.swift in Sources */,
 				5BF131F624A2116200E1D94B /* RxKolodaDelegateProxy.swift in Sources */,
