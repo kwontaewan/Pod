@@ -38,6 +38,7 @@ target 'Pod' do
   pod 'Firebase/Analytics'
   pod 'RxFirebase/Firestore'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
   
   #UI
   pod "Koloda"
