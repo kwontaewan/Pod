@@ -14,7 +14,7 @@ struct News {
       
     let title: String
       
-    let description: String
+    let contents: String
          
     let imageUrl: String
          

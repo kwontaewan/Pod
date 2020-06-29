@@ -50,7 +50,7 @@ extension NewsResponseDTO {
         return .init(
             documentID: documentID,
             title: title,
-            description: description,
+            contents: description,
             imageUrl: imageUrl,
             link: link,
             originLink: originLink,

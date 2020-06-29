@@ -55,6 +55,11 @@
 		5B64CF4824A9888A0074FEF7 /* NewsDetailSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF4724A9888A0074FEF7 /* NewsDetailSceneDIContainer.swift */; };
 		5B64CF4A24A9BA540074FEF7 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF4924A9BA540074FEF7 /* ToastView.swift */; };
 		5B64CF4C24A9C7DF0074FEF7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF4B24A9C7DF0074FEF7 /* Image.swift */; };
+		5B64CF4E24A9D52A0074FEF7 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF4D24A9D52A0074FEF7 /* Bookmark.swift */; };
+		5B64CF5024A9D6460074FEF7 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF4F24A9D6460074FEF7 /* RealmRepository.swift */; };
+		5B64CF5224A9DBF30074FEF7 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5124A9DBF30074FEF7 /* Realm+Ext.swift */; };
+		5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5324A9E19A0074FEF7 /* RealmDAO.swift */; };
+		5B64CF5624A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */; };
 		5BF131E824A192E700E1D94B /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E724A192E700E1D94B /* TagCell.swift */; };
 		5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E924A1A21500E1D94B /* UIView+Ext.swift */; };
 		5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131EB24A1A28300E1D94B /* NewsCardView.swift */; };
@@ -143,6 +148,11 @@
 		5B64CF4724A9888A0074FEF7 /* NewsDetailSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailSceneDIContainer.swift; sourceTree = "<group>"; };
 		5B64CF4924A9BA540074FEF7 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		5B64CF4B24A9C7DF0074FEF7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		5B64CF4D24A9D52A0074FEF7 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		5B64CF4F24A9D6460074FEF7 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		5B64CF5124A9DBF30074FEF7 /* Realm+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
+		5B64CF5324A9E19A0074FEF7 /* RealmDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDAO.swift; sourceTree = "<group>"; };
+		5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		5B6AA33324A2D8190075EAB8 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
 		5BF131E724A192E700E1D94B /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		5BF131E924A1A21500E1D94B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -344,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				5B1A491D249C54A400F0BFDF /* FirestoreDAO.swift */,
+				5B64CF5324A9E19A0074FEF7 /* RealmDAO.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -359,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				5B1A491B249C527600F0BFDF /* FirestoreRepository.swift */,
+				5B64CF4F24A9D6460074FEF7 /* RealmRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -376,6 +388,7 @@
 			children = (
 				5B1A4910249C4E9F00F0BFDF /* Tag.swift */,
 				5B1A4914249C4F1B00F0BFDF /* News.swift */,
+				5B64CF4D24A9D52A0074FEF7 /* Bookmark.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -460,6 +473,8 @@
 				5B64CF1724A58BC10074FEF7 /* UIViewController+StatusBar.swift */,
 				5B64CF4924A9BA540074FEF7 /* ToastView.swift */,
 				5B64CF4B24A9C7DF0074FEF7 /* Image.swift */,
+				5B64CF5124A9DBF30074FEF7 /* Realm+Ext.swift */,
+				5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -816,6 +831,7 @@
 				5B1A4922249C574B00F0BFDF /* MainFlowCoordinator.swift in Sources */,
 				5B1A48F4249C479E00F0BFDF /* Alertable.swift in Sources */,
 				5BF131FA24A231CB00E1D94B /* String+Ext.swift in Sources */,
+				5B64CF5624A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift in Sources */,
 				5B64CF1E24A591900074FEF7 /* NewsDetailCoordinator.swift in Sources */,
 				5BF131F824A213C100E1D94B /* MainNewsListViewModel.swift in Sources */,
 				5B1A490B249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift in Sources */,
@@ -823,7 +839,10 @@
 				5B1A48AC249C3C3800F0BFDF /* AppDelegate.swift in Sources */,
 				5B1A490F249C4E1600F0BFDF /* ViewModelType.swift in Sources */,
 				5B64CF1024A47EC00074FEF7 /* GestureIntroViewController.swift in Sources */,
+				5B64CF5024A9D6460074FEF7 /* RealmRepository.swift in Sources */,
 				5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */,
+				5B64CF4E24A9D52A0074FEF7 /* Bookmark.swift in Sources */,
+				5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */,
 				5B64CF1824A58BC10074FEF7 /* UIViewController+StatusBar.swift in Sources */,
 				5B1A4920249C551900F0BFDF /* FirestoreUseCase.swift in Sources */,
 				5B1A4900249C494500F0BFDF /* ErrorTracker.swift in Sources */,
@@ -834,6 +853,7 @@
 				5B64CF4C24A9C7DF0074FEF7 /* Image.swift in Sources */,
 				5B1A492A249C60D200F0BFDF /* AppFlowCoordinator.swift in Sources */,
 				5B64CF4824A9888A0074FEF7 /* NewsDetailSceneDIContainer.swift in Sources */,
+				5B64CF5224A9DBF30074FEF7 /* Realm+Ext.swift in Sources */,
 				5B1A48F6249C47B500F0BFDF /* StoryboardInstantiable.swift in Sources */,
 				5B64CF2224A591C70074FEF7 /* NewsDetailViewController.swift in Sources */,
 				5BF131F224A1A32A00E1D94B /* BorderUIView.swift in Sources */,

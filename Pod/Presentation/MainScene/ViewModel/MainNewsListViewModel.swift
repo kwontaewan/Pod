@@ -26,7 +26,7 @@ struct MainNewsListViewModel {
     
     init(with news: News) {
         self.title = news.title
-        self.description = news.description
+        self.description = news.contents
         self.imageUrl = news.imageUrl
         self.link = news.originLink
         self.registerAgo = news.registerDateTime
