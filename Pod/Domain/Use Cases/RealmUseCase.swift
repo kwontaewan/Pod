@@ -14,6 +14,10 @@ protocol RealmUseCaseProtocol {
     
     func fetchBookmark() -> Observable<[News]>
     
+    func isBookmark(documentId: String) -> Observable<Bool>
+    
+    func deleteBookmark(news: News) -> Observable<Void>
+        
 }
 
 final class RealmUseCase<RealmDAO>: RealmUseCaseProtocol where RealmDAO: RealmRepository, RealmDAO.T == News {
@@ -30,6 +34,22 @@ final class RealmUseCase<RealmDAO>: RealmUseCaseProtocol where RealmDAO: RealmRe
     
     func fetchBookmark() -> Observable<[News]> {
         return realmRepositroy.queryAll()
+    }
+    
+    func isBookmark(documentId: String) -> Observable<Bool> {
+        let predicateQuery = NSPredicate(format: "documentID == %s", documentId)
+        return realmRepositroy.query(with: predicateQuery, sortDescriptors: [])
+            .map { (news) -> Bool in
+                if news.count > 0 {
+                    return true
+                } else {
+                    return false
+                }
+            }
+    }
+    
+    func deleteBookmark(news: News) -> Observable<Void> {
+        return realmRepositroy.delete(entity: news)
     }
     
 }

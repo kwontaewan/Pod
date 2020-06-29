@@ -13,7 +13,7 @@ import FirebaseFirestore
 final class NewsDetailViewModel: DetectDeinit, ViewModelType {
     
     struct Input {
-        
+        let viewDidAppear: Driver<Bool>
     }
     
     struct Output {
@@ -24,8 +24,15 @@ final class NewsDetailViewModel: DetectDeinit, ViewModelType {
     
     private let firestoreUseCases: FirestoreUseCaseProtocol
     
-    init(news: News, firestoreUseCases: FirestoreUseCaseProtocol) {
+    private let realmUseCases: RealmUseCaseProtocol
+    
+    init(
+        news: News,
+        realmUseCases: RealmUseCaseProtocol,
+        firestoreUseCases: FirestoreUseCaseProtocol
+    ) {
         self.news = news
+        self.realmUseCases = realmUseCases
         self.firestoreUseCases = firestoreUseCases
     }
     

@@ -14,4 +14,12 @@ class Image {
         return UIImage(named: "ic_white_close")!
     }
     
+    class var checkBookmarkIcon: UIImage {
+        return UIImage(named: "ic_check_bookmark")!
+    }
+    
+    class var bookmarkIcon: UIImage {
+        return UIImage(named: "ic_bookmark")!
+    }
+    
 }
