@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,6 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         appFlowCoordinator?.startMain()
         window?.makeKeyAndVisible()
+        
+        Auth.auth().signInAnonymously() { (authResult, _) in
+            guard let user = authResult?.user else { return }
+            _ = user.isAnonymous  // true
+            let uid = user.uid
+            log.info("uid \(uid)")
+        }
         
         return true
     }
