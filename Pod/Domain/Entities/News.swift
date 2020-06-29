@@ -28,3 +28,17 @@ struct News {
              
     let tags: [String]
 }
+
+extension News: Equatable {
+    public static func == (lhs: News, rhs: News) -> Bool {
+            return lhs.documentID == rhs.documentID &&
+                lhs.title == rhs.title &&
+                lhs.contents == rhs.contents &&
+                lhs.imageUrl == rhs.imageUrl &&
+                lhs.link == rhs.link &&
+                lhs.originLink == rhs.originLink &&
+                lhs.pubDate == rhs.pubDate &&
+                lhs.registerDateTime == rhs.registerDateTime &&
+                lhs.tags == rhs.tags
+    }
+}

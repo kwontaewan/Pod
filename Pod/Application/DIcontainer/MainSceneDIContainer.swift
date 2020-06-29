@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 import FirebaseFirestore
 
 final class MainSceneDIContainer {
@@ -16,10 +18,20 @@ final class MainSceneDIContainer {
         return FirestoreUsecase(firestoreRepository: makeFirestoreRepository())
     }
     
+    func makeRealmUseCase() -> RealmUseCaseProtocol {
+        return RealmUseCase(repository: makeRealmRepository())
+    }
+    
     // MARK: - Repositories
     func makeFirestoreRepository() -> FirestoreRepository {
         return FirestoreDAO(db: Firestore.firestore())
     }
+    
+    func makeRealmRepository() -> RealmDAO<News> {
+        let repository = RealmDAO<News>(configuration: Realm.Configuration())
+        return repository
+    }
+    
     // MARK: - Main
     func makeMainViewController(coordinator: MainFlowCoordinator) -> MainViewController {
         return MainViewController.create(with: makeMainViewModel(coordinator: coordinator))
@@ -28,6 +40,7 @@ final class MainSceneDIContainer {
     func makeMainViewModel(coordinator: MainFlowCoordinator) -> MainViewModel {
         return MainViewModel(
             firestoreUseCases: makeFirestoreUseCase(),
+            realmUseCases: makeRealmUseCase(),
             coordinator: coordinator
         )
     }

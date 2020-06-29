@@ -18,6 +18,8 @@ final class MainViewModel: DetectDeinit, ViewModelType {
         
         let tag: PublishSubject<String> = PublishSubject<String>()
         
+        let bookmark: PublishSubject<News> = PublishSubject<News>()
+        
     }
     
     struct Output {
@@ -27,18 +29,24 @@ final class MainViewModel: DetectDeinit, ViewModelType {
         let news: Observable<[MainNewsListViewModel]>
         
         let showIntro: Driver<Void>
+        
+        let bookmark: Observable<Void>
                 
     }
     
     private let firestoreUseCases: FirestoreUseCaseProtocol
     
+    private let realmUseCases: RealmUseCaseProtocol
+    
     private let coordinator: MainFlowCoordinator
     
     init(
         firestoreUseCases: FirestoreUseCaseProtocol,
+        realmUseCases: RealmUseCaseProtocol,
         coordinator: MainFlowCoordinator
     ) {
         self.firestoreUseCases = firestoreUseCases
+        self.realmUseCases = realmUseCases
         self.coordinator = coordinator
     }
     
@@ -65,7 +73,12 @@ final class MainViewModel: DetectDeinit, ViewModelType {
                 self?.coordinator.presentGuideView()
             })
         
-        return Output(tags: tags, news: news, showIntro: showIntro)
+        let bookmark = input.bookmark
+            .flatMapLatest { (news) -> Observable<Void> in
+                return self.realmUseCases.saveBookmark(news: news)
+            }
+        
+        return Output(tags: tags, news: news, showIntro: showIntro, bookmark: bookmark)
     }
     
 }

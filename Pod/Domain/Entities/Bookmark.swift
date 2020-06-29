@@ -26,10 +26,14 @@ class Bookmark: Object {
       
     @objc dynamic var registerDateTime: String = ""
              
-    @objc dynamic var tags: [String] = []
+   var tags: Array<String> = Array<String>()
     
     @objc dynamic var time: TimeInterval = Date().timeIntervalSinceReferenceDate
 
+    override class func primaryKey() -> String? {
+        return "documentID"
+    }
+    
 }
 
 extension Bookmark: DomainConvertibleType {
@@ -50,7 +54,7 @@ extension Bookmark: DomainConvertibleType {
     
 }
 
-extension Bookmark: RealmRepresentable {
+extension News: RealmRepresentable {
     
     func asRealm() -> Bookmark {
         return Bookmark.build { (object) in

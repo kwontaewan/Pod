@@ -60,6 +60,7 @@
 		5B64CF5224A9DBF30074FEF7 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5124A9DBF30074FEF7 /* Realm+Ext.swift */; };
 		5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5324A9E19A0074FEF7 /* RealmDAO.swift */; };
 		5B64CF5624A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */; };
+		5BC3DFBA24AA155A00BEDBEF /* RealmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */; };
 		5BF131E824A192E700E1D94B /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E724A192E700E1D94B /* TagCell.swift */; };
 		5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E924A1A21500E1D94B /* UIView+Ext.swift */; };
 		5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131EB24A1A28300E1D94B /* NewsCardView.swift */; };
@@ -154,6 +155,7 @@
 		5B64CF5324A9E19A0074FEF7 /* RealmDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDAO.swift; sourceTree = "<group>"; };
 		5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		5B6AA33324A2D8190075EAB8 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
+		5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUseCase.swift; sourceTree = "<group>"; };
 		5BF131E724A192E700E1D94B /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		5BF131E924A1A21500E1D94B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		5BF131EB24A1A28300E1D94B /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				5B1A491F249C551900F0BFDF /* FirestoreUseCase.swift */,
+				5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -840,6 +843,7 @@
 				5B1A490F249C4E1600F0BFDF /* ViewModelType.swift in Sources */,
 				5B64CF1024A47EC00074FEF7 /* GestureIntroViewController.swift in Sources */,
 				5B64CF5024A9D6460074FEF7 /* RealmRepository.swift in Sources */,
+				5BC3DFBA24AA155A00BEDBEF /* RealmUseCase.swift in Sources */,
 				5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */,
 				5B64CF4E24A9D52A0074FEF7 /* Bookmark.swift in Sources */,
 				5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */,

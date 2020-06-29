@@ -12,6 +12,7 @@ import RxCocoa
 import RxSwiftExt
 import RxViewController
 import Koloda
+import RealmSwift
 import pop
 
 class MainViewController: BaseViewController, StoryboardInstantiable {
@@ -34,6 +35,8 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
     
     private let kolodaAlphaValueSemiTransparent: CGFloat = 0.1
     
+    private var input: MainViewModel.Input!
+    
     static func create(with viewModel: MainViewModel) -> MainViewController {
         let view = MainViewController.instantiateViewController()
         view.viewModel = viewModel
@@ -48,6 +51,7 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        log.info(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     override func viewDidLayoutSubviews() {
@@ -92,12 +96,12 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
             .take(1)
             .asDriverOnErrorJustComplete()
         
-        let input = MainViewModel.Input(viewDidAppear: viewDidAppear)
+        input = MainViewModel.Input(viewDidAppear: viewDidAppear)
         
         collectionView.rx.modelSelected(Tag.self)
             .asDriverOnErrorJustComplete()
             .drive(onNext: { [weak self] (tag) in
-                input.tag.onNext(tag.name)
+                self?.input.tag.onNext(tag.name)
                 self?.activityIndicator.startAnimating()
             }).disposed(by: disposeBag)
         
@@ -119,7 +123,7 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
             self?.activityIndicator.stopAnimating()
             
             if index == 0 {
-                input.tag.onNext(model.name)
+                self?.input.tag.onNext(model.name)
             }
             
             cell.tagLabel.text = model.name
@@ -138,6 +142,13 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
         output.showIntro
             .drive()
             .disposed(by: disposeBag)
+        
+        output.bookmark
+            .subscribe(onNext: { _ in
+                log.debug("save bookmark success")
+            }, onError: { (error) in
+                log.error(error)
+            }).disposed(by: disposeBag)
                 
     }
         
@@ -156,6 +167,12 @@ extension MainViewController: KolodaViewDelegate {
             log.debug("left")
         } else {
             log.debug("right")
+            
+            guard let news = news?[index] else {
+                return
+            }
+            
+            input.bookmark.onNext(news.news)
         }
     }
     

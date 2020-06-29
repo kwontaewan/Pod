@@ -21,7 +21,7 @@ final class RealmDAO<T:RealmRepresentable>: RealmRepository where T == T.RealmTy
 
     init(configuration: Realm.Configuration) {
         self.configuration = configuration
-        let name = "com.CleanArchitectureRxSwift.RealmPlatform.Repository"
+        let name = "kr.co.pod.Repository"
         self.scheduler = RunLoopThreadScheduler(threadName: name)
         print("File 📁 url: \(RLMRealmPathForFile("default.realm"))")
     }
@@ -40,11 +40,6 @@ final class RealmDAO<T:RealmRepresentable>: RealmRepository where T == T.RealmTy
         return Observable.deferred {
                     let realm = self.realm
                     let objects = realm.objects(T.RealmType.self)
-//            The implementation is broken since we are not using predicate and sortDescriptors
-//            but it cause compiler to crash with xcode 8.3 ¯\_(ツ)_/¯
-//                            .filter(predicate)
-//                            .sorted(by: sortDescriptors.map(SortDescriptor.init))
-
                     return Observable.array(from: objects)
                             .mapToDomain()
                 }
