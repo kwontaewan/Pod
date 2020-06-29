@@ -32,6 +32,8 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
     
     private var activityView: UIActivityIndicatorView!
     
+    private var toastView: ToastView?
+    
     private var viewModel: NewsDetailViewModel!
     
     var viewType: ViewType?
@@ -59,6 +61,14 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
     }
     
     private func initView() {
+        
+        toastView = ToastView()
+        toastView?.inner(to: self.view)
+        toastView?.snp.makeConstraints({ (make) in
+            make.left.equalToSuperview().offset(8)
+            make.right.equalToSuperview().offset(-8)
+            make.bottom.equalTo(self.bottomNavigationView.snp.top).offset(-12)
+        })
         
         if let viewType = viewType, viewType == .main {
             navigationController?.navigationBar.isHidden = false
@@ -104,7 +114,6 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
         }
         
         self.navigationItem.title = ouput.news.title
-        self.navigationController?.navigationBar.topItem?.title = "Profile Settings"
         
         closeButton.rx.tap
             .asDriver()
@@ -115,8 +124,14 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
         shareButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] _ in
-                let vc = UIActivityViewController(activityItems: [ouput.news.title ,ouput.news.link], applicationActivities: [])
+                let vc = UIActivityViewController(activityItems: [ouput.news.title, ouput.news.link], applicationActivities: [])
                 self?.present(vc, animated: true, completion: nil)
+            }).disposed(by: disposeBag)
+        
+        bookmarkButton.rx.tap
+        .asDriver()
+            .drive(onNext: { [weak self] (_) in
+                self?.toastView?.showToast(title: "bookmark_info".localized)
             }).disposed(by: disposeBag)
         
     }
@@ -144,7 +159,16 @@ extension NewsDetailViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         activityView.stopAnimating()
         activityView.isHidden = true
-
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        guard navigationAction.navigationType == .other || navigationAction.navigationType == .reload  else {
+             decisionHandler(.cancel)
+             return
+         }
+         decisionHandler(.allow)
+        
     }
     
 }

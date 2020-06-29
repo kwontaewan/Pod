@@ -11,3 +11,4 @@ hour = "시간 전";
 day = "일 전";
 month = "달 전";
 year = "년 전";
+bookmark_info = "북마크가 설정되었습니다.";
