@@ -20,6 +20,8 @@ target 'Pod' do
   pod 'RxCocoa'
   pod 'RxSwiftExt', '~> 5'
   pod 'RxViewController'
+  pod "RxRealm"
+  pod "RealmSwift"
 
   #Logging
   pod 'CocoaLumberjack/Swift'
@@ -30,10 +32,7 @@ target 'Pod' do
   
   #HTML Parser
   pod 'SwiftSoup'
-  
-  #Cache
-  pod 'Cache'
-  
+    
   #Firebase
   pod 'Firebase/Analytics'
   pod 'RxFirebase/Firestore'

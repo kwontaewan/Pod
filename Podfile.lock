@@ -164,7 +164,6 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
-  - Cache (5.3.0)
   - CocoaLumberjack/Core (3.6.1)
   - CocoaLumberjack/Swift (3.6.1):
     - CocoaLumberjack/Core
@@ -286,6 +285,11 @@ PODS:
   - pop (1.0.12)
   - PromisesObjC (1.2.8)
   - Quick (2.2.0)
+  - Realm (5.1.0):
+    - Realm/Headers (= 5.1.0)
+  - Realm/Headers (5.1.0)
+  - RealmSwift (5.1.0):
+    - Realm (= 5.1.0)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
   - RxCocoa (5.1.1):
@@ -297,6 +301,9 @@ PODS:
     - FirebaseFirestore (~> 1.5)
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
+  - RxRealm (3.0.0):
+    - RealmSwift (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -319,7 +326,6 @@ PODS:
   - Then (2.6.0)
 
 DEPENDENCIES:
-  - Cache
   - CocoaLumberjack/Swift
   - Firebase/Analytics
   - Firebase/Auth
@@ -328,9 +334,11 @@ DEPENDENCIES:
   - Koloda
   - Nimble
   - Quick
+  - RealmSwift
   - RxBlocking
   - RxCocoa
   - RxFirebase/Firestore
+  - RxRealm
   - RxSwift
   - RxSwiftExt (~> 5)
   - RxTest
@@ -344,7 +352,6 @@ SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
-    - Cache
     - CocoaLumberjack
     - Firebase
     - FirebaseAnalytics
@@ -370,10 +377,13 @@ SPEC REPOS:
     - pop
     - PromisesObjC
     - Quick
+    - Realm
+    - RealmSwift
     - RxBlocking
     - RxCocoa
     - RxFirebase
     - RxFirebaseFirestore
+    - RxRealm
     - RxRelay
     - RxSwift
     - RxSwiftExt
@@ -387,7 +397,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
-  Cache: 48762993ec44e1d93483c4d4a13edd18452326f4
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
   FirebaseAnalytics: a1a0b3327ceb5cd5b4bacffdb293f6c909aa087d
@@ -413,10 +422,13 @@ SPEC CHECKSUMS:
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Realm: bdea546851e37b4cf0a2400cef115c7c26fda488
+  RealmSwift: 70945aa168db93b215c460e9c8ef680261aa28af
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxFirebase: 45e6448c69c7212e21f8ba89144443f916437861
   RxFirebaseFirestore: edabc5e6b02bd876a323a0e53cb5071356505db2
+  RxRealm: af7a3c857efd5a711c176f6df0d67418ad48293b
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
@@ -427,6 +439,6 @@ SPEC CHECKSUMS:
   SwiftSoup: f97bc4e988c7729d6457f9642f974c617a6e2510
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
 
-PODFILE CHECKSUM: d184edd5932be2d949bbb3f9ce1afb9cc3ea5dbc
+PODFILE CHECKSUM: db64b4e7687f6df0565ba0a50d80f5cc67eef17d
 
 COCOAPODS: 1.9.1
