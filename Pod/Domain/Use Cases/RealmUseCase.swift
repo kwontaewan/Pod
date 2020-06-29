@@ -12,6 +12,8 @@ protocol RealmUseCaseProtocol {
 
     func saveBookmark(news: News) -> Observable<Void>
     
+    func fetchBookmark() -> Observable<[News]>
+    
 }
 
 final class RealmUseCase<RealmDAO>: RealmUseCaseProtocol where RealmDAO: RealmRepository, RealmDAO.T == News {
@@ -24,6 +26,10 @@ final class RealmUseCase<RealmDAO>: RealmUseCaseProtocol where RealmDAO: RealmRe
     
     func saveBookmark(news: News) -> Observable<Void> {
         return realmRepositroy.save(entity: news)
+    }
+    
+    func fetchBookmark() -> Observable<[News]> {
+        return realmRepositroy.queryAll()
     }
     
 }

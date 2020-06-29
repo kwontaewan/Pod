@@ -165,14 +165,15 @@ extension MainViewController: KolodaViewDelegate {
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         if direction == .left {
             log.debug("left")
-        } else {
-            log.debug("right")
             
             guard let news = news?[index] else {
                 return
             }
-            
+              
             input.bookmark.onNext(news.news)
+            
+        } else {
+            log.debug("right")
         }
     }
     

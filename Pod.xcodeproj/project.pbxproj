@@ -61,6 +61,14 @@
 		5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5324A9E19A0074FEF7 /* RealmDAO.swift */; };
 		5B64CF5624A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */; };
 		5BC3DFBA24AA155A00BEDBEF /* RealmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */; };
+		5BC3DFC024AA294A00BEDBEF /* BookmarkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */; };
+		5BC3DFC224AA295A00BEDBEF /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFC124AA295900BEDBEF /* BookmarkViewController.swift */; };
+		5BC3DFC424AA296900BEDBEF /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFC324AA296900BEDBEF /* BookmarkViewModel.swift */; };
+		5BC3DFC624AA298000BEDBEF /* BookmarkCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFC524AA298000BEDBEF /* BookmarkCoordinator.swift */; };
+		5BC3DFC924AA2A4A00BEDBEF /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFC824AA2A4A00BEDBEF /* BookmarkCell.swift */; };
+		5BC3DFCD24AA2AC500BEDBEF /* BorderUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFCC24AA2AC500BEDBEF /* BorderUIImageView.swift */; };
+		5BC3DFCF24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFCE24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift */; };
+		5BC3DFD124AA348900BEDBEF /* BookmarkListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFD024AA348900BEDBEF /* BookmarkListItemViewModel.swift */; };
 		5BF131E824A192E700E1D94B /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E724A192E700E1D94B /* TagCell.swift */; };
 		5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E924A1A21500E1D94B /* UIView+Ext.swift */; };
 		5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131EB24A1A28300E1D94B /* NewsCardView.swift */; };
@@ -156,6 +164,14 @@
 		5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		5B6AA33324A2D8190075EAB8 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
 		5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUseCase.swift; sourceTree = "<group>"; };
+		5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookmarkViewController.storyboard; sourceTree = "<group>"; };
+		5BC3DFC124AA295900BEDBEF /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		5BC3DFC324AA296900BEDBEF /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
+		5BC3DFC524AA298000BEDBEF /* BookmarkCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCoordinator.swift; sourceTree = "<group>"; };
+		5BC3DFC824AA2A4A00BEDBEF /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
+		5BC3DFCC24AA2AC500BEDBEF /* BorderUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderUIImageView.swift; sourceTree = "<group>"; };
+		5BC3DFCE24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkSceneDIContainer.swift; sourceTree = "<group>"; };
+		5BC3DFD024AA348900BEDBEF /* BookmarkListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListItemViewModel.swift; sourceTree = "<group>"; };
 		5BF131E724A192E700E1D94B /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		5BF131E924A1A21500E1D94B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		5BF131EB24A1A28300E1D94B /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
@@ -323,6 +339,7 @@
 		5B1A48DF249C44A500F0BFDF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5BC3DFBB24AA284200BEDBEF /* BookmarkScene */,
 				5B64CF1924A590800074FEF7 /* NewsDetailScene */,
 				5B1A48EB249C466900F0BFDF /* MainScene */,
 			);
@@ -450,6 +467,7 @@
 			children = (
 				5B1A4927249C5CA000F0BFDF /* MainSceneDIContainer.swift */,
 				5B64CF4724A9888A0074FEF7 /* NewsDetailSceneDIContainer.swift */,
+				5BC3DFCE24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift */,
 			);
 			path = DIcontainer;
 			sourceTree = "<group>";
@@ -478,6 +496,7 @@
 				5B64CF4B24A9C7DF0074FEF7 /* Image.swift */,
 				5B64CF5124A9DBF30074FEF7 /* Realm+Ext.swift */,
 				5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */,
+				5BC3DFCC24AA2AC500BEDBEF /* BorderUIImageView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -533,6 +552,51 @@
 				5B64CF1D24A591900074FEF7 /* NewsDetailCoordinator.swift */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		5BC3DFBB24AA284200BEDBEF /* BookmarkScene */ = {
+			isa = PBXGroup;
+			children = (
+				5BC3DFBE24AA291E00BEDBEF /* Flow */,
+				5BC3DFBD24AA291A00BEDBEF /* ViewModel */,
+				5BC3DFBC24AA291100BEDBEF /* View */,
+			);
+			path = BookmarkScene;
+			sourceTree = "<group>";
+		};
+		5BC3DFBC24AA291100BEDBEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BC3DFC724AA2A3300BEDBEF /* Cells */,
+				5BC3DFC124AA295900BEDBEF /* BookmarkViewController.swift */,
+				5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BC3DFBD24AA291A00BEDBEF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5BC3DFC324AA296900BEDBEF /* BookmarkViewModel.swift */,
+				5BC3DFD024AA348900BEDBEF /* BookmarkListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5BC3DFBE24AA291E00BEDBEF /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				5BC3DFC524AA298000BEDBEF /* BookmarkCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		5BC3DFC724AA2A3300BEDBEF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5BC3DFC824AA2A4A00BEDBEF /* BookmarkCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		5BF131E624A192CE00E1D94B /* Cells */ = {
@@ -657,6 +721,7 @@
 				5B64CF2424A591CF0074FEF7 /* NewsDetailViewController.storyboard in Resources */,
 				5B1A491A249C4FDA00F0BFDF /* MainViewController.storyboard in Resources */,
 				5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */,
+				5BC3DFC024AA294A00BEDBEF /* BookmarkViewController.storyboard in Resources */,
 				5B1A4909249C4D4400F0BFDF /* GoogleService-Info.plist in Resources */,
 				5BF131FC24A2326300E1D94B /* Localizable.strings in Resources */,
 				5B1A48B8249C3C3A00F0BFDF /* LaunchScreen.storyboard in Resources */,
@@ -833,12 +898,15 @@
 				5B1A491C249C527600F0BFDF /* FirestoreRepository.swift in Sources */,
 				5B1A4922249C574B00F0BFDF /* MainFlowCoordinator.swift in Sources */,
 				5B1A48F4249C479E00F0BFDF /* Alertable.swift in Sources */,
+				5BC3DFCD24AA2AC500BEDBEF /* BorderUIImageView.swift in Sources */,
 				5BF131FA24A231CB00E1D94B /* String+Ext.swift in Sources */,
 				5B64CF5624A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift in Sources */,
 				5B64CF1E24A591900074FEF7 /* NewsDetailCoordinator.swift in Sources */,
 				5BF131F824A213C100E1D94B /* MainNewsListViewModel.swift in Sources */,
+				5BC3DFD124AA348900BEDBEF /* BookmarkListItemViewModel.swift in Sources */,
 				5B1A490B249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift in Sources */,
 				5B1A492C249C610100F0BFDF /* AppDIContainer.swift in Sources */,
+				5BC3DFC624AA298000BEDBEF /* BookmarkCoordinator.swift in Sources */,
 				5B1A48AC249C3C3800F0BFDF /* AppDelegate.swift in Sources */,
 				5B1A490F249C4E1600F0BFDF /* ViewModelType.swift in Sources */,
 				5B64CF1024A47EC00074FEF7 /* GestureIntroViewController.swift in Sources */,
@@ -847,10 +915,12 @@
 				5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */,
 				5B64CF4E24A9D52A0074FEF7 /* Bookmark.swift in Sources */,
 				5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */,
+				5BC3DFCF24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift in Sources */,
 				5B64CF1824A58BC10074FEF7 /* UIViewController+StatusBar.swift in Sources */,
 				5B1A4920249C551900F0BFDF /* FirestoreUseCase.swift in Sources */,
 				5B1A4900249C494500F0BFDF /* ErrorTracker.swift in Sources */,
 				5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */,
+				5BC3DFC224AA295A00BEDBEF /* BookmarkViewController.swift in Sources */,
 				5B64CF1224A57C270074FEF7 /* BorderUIButton.swift in Sources */,
 				5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */,
 				5B1A48FE249C492100F0BFDF /* ActivityIndicator.swift in Sources */,
@@ -865,12 +935,14 @@
 				5B1A48E4249C45E600F0BFDF /* Logger.swift in Sources */,
 				5BF131F424A1A40600E1D94B /* CustomGradientView.swift in Sources */,
 				5B1A4928249C5CA000F0BFDF /* MainSceneDIContainer.swift in Sources */,
+				5BC3DFC924AA2A4A00BEDBEF /* BookmarkCell.swift in Sources */,
 				5B64CF4A24A9BA540074FEF7 /* ToastView.swift in Sources */,
 				5B64CF1424A581690074FEF7 /* UserDefaultsManagement.swift in Sources */,
 				5B1A4911249C4E9F00F0BFDF /* Tag.swift in Sources */,
 				5B1A490D249C4E0500F0BFDF /* ModelType.swift in Sources */,
 				5B1A491E249C54A400F0BFDF /* FirestoreDAO.swift in Sources */,
 				5B1A4918249C4FCD00F0BFDF /* MainViewController.swift in Sources */,
+				5BC3DFC424AA296900BEDBEF /* BookmarkViewModel.swift in Sources */,
 				5B64CF1624A587540074FEF7 /* UILabel+Ext.swift in Sources */,
 				5B1A4915249C4F1B00F0BFDF /* News.swift in Sources */,
 				5B1A4924249C57AF00F0BFDF /* MainViewModel.swift in Sources */,

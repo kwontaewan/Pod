@@ -11,13 +11,16 @@ import UIKit
 class AppFlowCoordinator {
     
     var mainNavigationController: UINavigationController
+    var bookmarkNavigationController: UINavigationController
     private let appDIContainer: AppDIContainer
     
     init(
         mainNavigationController: UINavigationController,
+        bookmarkNavigationController: UINavigationController,
         appDIContainer: AppDIContainer
     ) {
         self.mainNavigationController = mainNavigationController
+        self.bookmarkNavigationController = bookmarkNavigationController
         self.appDIContainer = appDIContainer
     }
     
@@ -37,4 +40,10 @@ class AppFlowCoordinator {
         flow.start(news: news, viewType: viewType)
     }
     
+    func startBookmark() {
+        let bookmarkSceneDIContainer = appDIContainer.makeBookmarkSceneDIContainer()
+        let flow = bookmarkSceneDIContainer.makeBookmarkFlowCoordinator(navigationController: bookmarkNavigationController)
+        flow.start()
+    }
+
 }

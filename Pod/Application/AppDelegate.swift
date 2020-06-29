@@ -26,26 +26,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let mainNavigaitonController = UINavigationController()
         
+        let bookmarkNavigaitonController = UINavigationController()
+        
         mainNavigaitonController.tabBarItem = UITabBarItem(
             title: "Main",
             image: nil,
             selectedImage: nil
         )
         
+        bookmarkNavigaitonController.tabBarItem = UITabBarItem(
+            title: "Bookmark",
+            image: nil,
+            selectedImage: nil
+        )
+        
         appFlowCoordinator = AppFlowCoordinator(
             mainNavigationController: mainNavigaitonController,
+            bookmarkNavigationController: bookmarkNavigaitonController,
             appDIContainer: appDIContainer
         )
         
         let tabarController = UITabBarController()
         
         tabarController.viewControllers = [
-            mainNavigaitonController
+            mainNavigaitonController,
+            bookmarkNavigaitonController
         ]
         
         window?.rootViewController = tabarController
         
         appFlowCoordinator?.startMain()
+        appFlowCoordinator?.startBookmark()
         window?.makeKeyAndVisible()
         
         Auth.auth().signInAnonymously() { (authResult, _) in

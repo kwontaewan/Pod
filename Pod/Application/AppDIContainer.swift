@@ -18,4 +18,8 @@ final class AppDIContainer {
         return NewsDetailSceneDIContainer()
     }
     
+    func makeBookmarkSceneDIContainer() -> BookmarkSceneDIContainer {
+        return BookmarkSceneDIContainer()
+    }
+    
 }

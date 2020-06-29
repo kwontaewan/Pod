@@ -77,4 +77,3 @@ protocol RealmRepresentable {
     func asRealm() -> RealmType
 
 }
-

@@ -5,5 +5,6 @@ disabled_rules:
   - force_try
   - type_name
   - force_cast
+  - function_body_length
 excluded:
   - Pods

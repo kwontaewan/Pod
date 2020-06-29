@@ -26,7 +26,7 @@ class Bookmark: Object {
       
     @objc dynamic var registerDateTime: String = ""
              
-   var tags: Array<String> = Array<String>()
+   var tags: [String] = []
     
     @objc dynamic var time: TimeInterval = Date().timeIntervalSinceReferenceDate
 
