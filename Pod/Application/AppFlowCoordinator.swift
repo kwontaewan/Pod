@@ -27,4 +27,14 @@ class AppFlowCoordinator {
         flow.start()
     }
     
+    func startNewsDetail(
+        news: News,
+        viewType: ViewType,
+        navigationViewController: UINavigationController?
+    ) {
+        let newDetailSceneDIContainer = appDIContainer.makeNewsDetailSceneDIContainer()
+        let flow = newDetailSceneDIContainer.makeNewDetailCoordinator(navigationController: navigationViewController)
+        flow.start(news: news, viewType: viewType)
+    }
+    
 }

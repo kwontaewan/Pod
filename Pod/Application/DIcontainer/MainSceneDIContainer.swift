@@ -26,7 +26,10 @@ final class MainSceneDIContainer {
     }
     
     func makeMainViewModel(coordinator: MainFlowCoordinator) -> MainViewModel {
-        return MainViewModel(firestoreUseCases: makeFirestoreUseCase(), coordinator: coordinator)
+        return MainViewModel(
+            firestoreUseCases: makeFirestoreUseCase(),
+            coordinator: coordinator
+        )
     }
     
     func makeGestureIntroViewController() -> GestureIntroViewController {

@@ -14,4 +14,8 @@ final class AppDIContainer {
         return MainSceneDIContainer()
     }
     
+    func makeNewsDetailSceneDIContainer() -> NewsDetailSceneDIContainer {
+        return NewsDetailSceneDIContainer()
+    }
+    
 }

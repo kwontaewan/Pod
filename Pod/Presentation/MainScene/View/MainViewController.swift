@@ -48,7 +48,6 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        activityIndicator.startAnimating()
     }
     
     override func viewDidLayoutSubviews() {
@@ -74,6 +73,7 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
          }
         
         navigationController?.navigationBar.isHidden = true
+        self.setupWhiteNavigationBar()
         swipeCardView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         swipeCardView.countOfVisibleCards = kolodaCountOfVisibleCards
         swipeCardView.appearanceAnimationDuration = TimeInterval(0.5)
@@ -160,7 +160,19 @@ extension MainViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-  
+     
+        guard let news = news?[index] else {
+            return
+        }
+        
+        self.appDelegate
+            .appFlowCoordinator?
+            .startNewsDetail(
+                news: news.news,
+                viewType: .main,
+                navigationViewController: self.navigationController
+        )
+            
     }
     
     func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool {
@@ -181,7 +193,7 @@ extension MainViewController: KolodaViewDelegate {
         animation?.springSpeed = frameAnimationSpringSpeed
         return animation
     }
-    
+        
 }
 
 // MARK: KolodaViewDataSource

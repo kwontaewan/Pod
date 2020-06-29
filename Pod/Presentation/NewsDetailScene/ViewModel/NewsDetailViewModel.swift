@@ -6,4 +6,31 @@
 //  Copyright © 2020 Gunter. All rights reserved.
 //
 
-import Foundation
+import RxCocoa
+import RxSwift
+import FirebaseFirestore
+
+final class NewsDetailViewModel: DetectDeinit, ViewModelType {
+    
+    struct Input {
+        
+    }
+    
+    struct Output {
+        let news: News
+    }
+    
+    private let news: News
+    
+    private let firestoreUseCases: FirestoreUseCaseProtocol
+    
+    init(news: News, firestoreUseCases: FirestoreUseCaseProtocol) {
+        self.news = news
+        self.firestoreUseCases = firestoreUseCases
+    }
+    
+    func transform(input: Input) -> Output {
+        return Output(news: news)
+    }
+    
+}
