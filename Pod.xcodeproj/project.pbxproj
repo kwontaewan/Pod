@@ -73,6 +73,7 @@
 		5BC3DFCD24AA2AC500BEDBEF /* BorderUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFCC24AA2AC500BEDBEF /* BorderUIImageView.swift */; };
 		5BC3DFCF24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFCE24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift */; };
 		5BC3DFD124AA348900BEDBEF /* BookmarkListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFD024AA348900BEDBEF /* BookmarkListItemViewModel.swift */; };
+		5BC3DFD324AB6E9C00BEDBEF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFD224AB6E9C00BEDBEF /* Utility.swift */; };
 		5BF131E824A192E700E1D94B /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E724A192E700E1D94B /* TagCell.swift */; };
 		5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E924A1A21500E1D94B /* UIView+Ext.swift */; };
 		5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131EB24A1A28300E1D94B /* NewsCardView.swift */; };
@@ -180,6 +181,7 @@
 		5BC3DFCC24AA2AC500BEDBEF /* BorderUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderUIImageView.swift; sourceTree = "<group>"; };
 		5BC3DFCE24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkSceneDIContainer.swift; sourceTree = "<group>"; };
 		5BC3DFD024AA348900BEDBEF /* BookmarkListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListItemViewModel.swift; sourceTree = "<group>"; };
+		5BC3DFD224AB6E9C00BEDBEF /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		5BF131E724A192E700E1D94B /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		5BF131E924A1A21500E1D94B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		5BF131EB24A1A28300E1D94B /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 				5B64CF5124A9DBF30074FEF7 /* Realm+Ext.swift */,
 				5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */,
 				5BC3DFCC24AA2AC500BEDBEF /* BorderUIImageView.swift */,
+				5BC3DFD224AB6E9C00BEDBEF /* Utility.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -982,6 +985,7 @@
 				5B1A491E249C54A400F0BFDF /* FirestoreDAO.swift in Sources */,
 				5B1A4918249C4FCD00F0BFDF /* MainViewController.swift in Sources */,
 				5BC3DFC424AA296900BEDBEF /* BookmarkViewModel.swift in Sources */,
+				5BC3DFD324AB6E9C00BEDBEF /* Utility.swift in Sources */,
 				5B64CF1624A587540074FEF7 /* UILabel+Ext.swift in Sources */,
 				5B1A4915249C4F1B00F0BFDF /* News.swift in Sources */,
 				5B1A4924249C57AF00F0BFDF /* MainViewModel.swift in Sources */,

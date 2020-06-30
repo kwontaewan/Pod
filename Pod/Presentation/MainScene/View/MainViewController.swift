@@ -243,6 +243,7 @@ extension MainViewController: KolodaViewDataSource {
         newsCardView.titleLabel.text = news.title
         newsCardView.linkLabel.text = news.link
         newsCardView.tagLabel.text = news.tag
+        newsCardView.timeAgoLabel.text = news.registerAgo
         newsCardView.newsImageView.setImage(with: news.imageUrl)
         
         return newsCardView
