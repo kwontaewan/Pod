@@ -22,4 +22,8 @@ final class AppDIContainer {
         return BookmarkSceneDIContainer()
     }
     
+    func makeSettingSceneDIContainer() -> SettingSceneDIContainer {
+        return SettingSceneDIContainer()
+    }
+    
 }

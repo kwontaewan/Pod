@@ -14,3 +14,4 @@ year = "년 전";
 bookmark_info = "북마크가 설정되었습니다.";
 bookmark_cancel_info = "북마크가 해제되었습니다.";
 bookmark_title = "북마크";
+setting_title = "설정";

@@ -28,13 +28,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
           
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { _, _ in }
-        application.registerForRemoteNotifications()
+                
+        if !UserDefaultsManagement.getSkipIntro() {
+            UserDefaultsManagement.setNotification(true)
+            UserDefaultsManagement.setEventNotification(true)
+        }
+                
+        if UserDefaultsManagement.getNotification() || UserDefaultsManagement.getEventNotification() || !(UserDefaultsManagement.getSkipIntro()) {
+            application.registerForRemoteNotifications()
+        } else {
+            application.unregisterForRemoteNotifications()
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let mainNavigaitonController = UINavigationController()
         
         let bookmarkNavigaitonController = UINavigationController()
+        
+        let settingNavigationController = UINavigationController()
         
         mainNavigaitonController.tabBarItem = UITabBarItem(
             title: "Main",
@@ -48,9 +60,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             selectedImage: nil
         )
         
+        settingNavigationController.tabBarItem = UITabBarItem(
+            title: "Setting",
+            image: nil,
+            selectedImage: nil
+        )
+        
         appFlowCoordinator = AppFlowCoordinator(
             mainNavigationController: mainNavigaitonController,
             bookmarkNavigationController: bookmarkNavigaitonController,
+            settingNavigationController: settingNavigationController,
             appDIContainer: appDIContainer
         )
         
@@ -70,13 +89,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         tabarController.viewControllers = [
             mainNavigaitonController,
-            bookmarkNavigaitonController
+            bookmarkNavigaitonController,
+            settingNavigationController
         ]
         
         window?.rootViewController = tabarController
         
         appFlowCoordinator?.startMain()
         appFlowCoordinator?.startBookmark()
+        appFlowCoordinator?.startSetting()
         window?.makeKeyAndVisible()
         
         Auth.auth().signInAnonymously() { (authResult, _) in
@@ -101,14 +122,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
   
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
+        log.debug()
         completionHandler([.alert, .badge, .sound])
     }
   
-  
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        log.debug()
         completionHandler()
     }
+  
 }
 
 extension AppDelegate: MessagingDelegate {

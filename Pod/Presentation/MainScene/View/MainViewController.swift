@@ -37,6 +37,8 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
     
     private var input: MainViewModel.Input!
     
+    private var isTagLoading: Bool = false
+    
     static func create(with viewModel: MainViewModel) -> MainViewController {
         let view = MainViewController.instantiateViewController()
         view.viewModel = viewModel
@@ -53,7 +55,7 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
         super.viewDidAppear(animated)
         log.info(Realm.Configuration.defaultConfiguration.fileURL!)
     }
-    
+        
     override func viewDidLayoutSubviews() {
         activityIndicator = UIActivityIndicatorView(frame:
             CGRect(
@@ -67,6 +69,7 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
         activityIndicator.color = UIColor.lightGray
         
         view.addSubview(activityIndicator)
+                
     }
     
     private func initView() {
@@ -75,7 +78,9 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
          }
         
-        navigationController?.navigationBar.isHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        self.view.backgroundColor = .white
         self.setupWhiteNavigationBar()
         swipeCardView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         swipeCardView.countOfVisibleCards = kolodaCountOfVisibleCards
@@ -84,7 +89,7 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
         swipeCardView.swipe(.right)
         swipeCardView.delegate = self
         swipeCardView.dataSource = self
-        
+      
     }
     
     private func setupRx() {
@@ -92,6 +97,9 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
         assert(viewModel != nil)
         
         let viewDidAppear = rx.viewDidAppear
+            .do(onNext: { [weak self] (_) in
+                self?.activityIndicator.startAnimating()
+            })
             .take(1)
             .asDriverOnErrorJustComplete()
         
@@ -103,13 +111,7 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
                 self?.input.tag.onNext(tag.name)
                 self?.activityIndicator.startAnimating()
             }).disposed(by: disposeBag)
-        
-        collectionView.rx.willDisplayCell
-            .subscribe(onNext: { [weak self] (_) in
-                let selectedIndexPath = IndexPath(item: 0, section: 0)
-                self?.collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: [])
-            }).disposed(by: disposeBag)
-        
+                
         let output = viewModel.transform(input: input)
         
         output.tags.drive(
@@ -121,7 +123,11 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
             
             self?.activityIndicator.stopAnimating()
             
-            if index == 0 {
+            if index == 0 && !(self?.isTagLoading ?? false) {
+                self?.isTagLoading = true
+                let selectedIndexPath = IndexPath(item: 0, section: 0)
+                self?.collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: [])
+                cell.isSelected = true
                 self?.input.tag.onNext(model.name)
             }
             

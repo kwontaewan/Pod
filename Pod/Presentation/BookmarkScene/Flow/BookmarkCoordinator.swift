@@ -14,7 +14,6 @@ protocol BookmarkCoordinatorDependencies {
         coordinator: BookmarkCoordinator
     ) -> BookmarkViewController
     
-    
 }
 
 protocol BookmarkCoordinator {
@@ -41,6 +40,5 @@ class DefaultBookmarkFlowCoordinator: DetectDeinit, BookmarkCoordinator {
         let vc = dependencies.makeBookmarkViewController(coordinator: self)
         navigationController.pushViewController(vc, animated: true)
     }
-    
     
 }

@@ -53,11 +53,12 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-    
+        
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         if let viewType = viewType, viewType == .main {
-            navigationController?.navigationBar.isHidden = true
-        }
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+         }
     }
     
     private func initView() {
@@ -71,7 +72,7 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
         })
         
         if let viewType = viewType, viewType == .main {
-            navigationController?.navigationBar.isHidden = false
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
         }
         
         navigationItem.hidesBackButton = true

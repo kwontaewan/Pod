@@ -12,15 +12,18 @@ class AppFlowCoordinator {
     
     var mainNavigationController: UINavigationController
     var bookmarkNavigationController: UINavigationController
+    var settingNavigationController: UINavigationController
     private let appDIContainer: AppDIContainer
     
     init(
         mainNavigationController: UINavigationController,
         bookmarkNavigationController: UINavigationController,
+        settingNavigationController: UINavigationController,
         appDIContainer: AppDIContainer
     ) {
         self.mainNavigationController = mainNavigationController
         self.bookmarkNavigationController = bookmarkNavigationController
+        self.settingNavigationController = settingNavigationController
         self.appDIContainer = appDIContainer
     }
     
@@ -43,6 +46,12 @@ class AppFlowCoordinator {
     func startBookmark() {
         let bookmarkSceneDIContainer = appDIContainer.makeBookmarkSceneDIContainer()
         let flow = bookmarkSceneDIContainer.makeBookmarkFlowCoordinator(navigationController: bookmarkNavigationController)
+        flow.start()
+    }
+    
+    func startSetting() {
+        let settingSceneDIContainer = appDIContainer.makeSettingSceneDIContainer()
+        let flow = settingSceneDIContainer.makeSettingFlowCoordinator(navigationController: settingNavigationController)
         flow.start()
     }
 

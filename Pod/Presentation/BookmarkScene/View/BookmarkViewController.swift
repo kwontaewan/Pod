@@ -31,6 +31,7 @@ class BookmarkViewController: BaseViewController, StoryboardInstantiable {
     private func initView() {
         self.setupWhiteNavigationBar()
         self.navigationItem.title = "bookmark_title".localized
+        self.tableView.backgroundColor = .white
     }
     
     private func setupRx() {

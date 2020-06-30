@@ -60,6 +60,10 @@
 		5B64CF5224A9DBF30074FEF7 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5124A9DBF30074FEF7 /* Realm+Ext.swift */; };
 		5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5324A9E19A0074FEF7 /* RealmDAO.swift */; };
 		5B64CF5624A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */; };
+		5B64CF6124AB09870074FEF7 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B64CF6024AB09870074FEF7 /* SettingViewController.storyboard */; };
+		5B64CF6324AB09950074FEF7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF6224AB09950074FEF7 /* SettingViewController.swift */; };
+		5B64CF6524AB0D300074FEF7 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF6424AB0D300074FEF7 /* SettingCoordinator.swift */; };
+		5B64CF6724AB0E4F0074FEF7 /* SettingSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF6624AB0E4F0074FEF7 /* SettingSceneDIContainer.swift */; };
 		5BC3DFBA24AA155A00BEDBEF /* RealmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */; };
 		5BC3DFC024AA294A00BEDBEF /* BookmarkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */; };
 		5BC3DFC224AA295A00BEDBEF /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFC124AA295900BEDBEF /* BookmarkViewController.swift */; };
@@ -162,6 +166,10 @@
 		5B64CF5124A9DBF30074FEF7 /* Realm+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
 		5B64CF5324A9E19A0074FEF7 /* RealmDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDAO.swift; sourceTree = "<group>"; };
 		5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		5B64CF6024AB09870074FEF7 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
+		5B64CF6224AB09950074FEF7 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5B64CF6424AB0D300074FEF7 /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
+		5B64CF6624AB0E4F0074FEF7 /* SettingSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSceneDIContainer.swift; sourceTree = "<group>"; };
 		5B6AA33324A2D8190075EAB8 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
 		5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUseCase.swift; sourceTree = "<group>"; };
 		5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookmarkViewController.storyboard; sourceTree = "<group>"; };
@@ -469,6 +477,7 @@
 				5B1A4927249C5CA000F0BFDF /* MainSceneDIContainer.swift */,
 				5B64CF4724A9888A0074FEF7 /* NewsDetailSceneDIContainer.swift */,
 				5BC3DFCE24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift */,
+				5B64CF6624AB0E4F0074FEF7 /* SettingSceneDIContainer.swift */,
 			);
 			path = DIcontainer;
 			sourceTree = "<group>";
@@ -567,6 +576,8 @@
 		5B64CF5E24AB08380074FEF7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CF6224AB09950074FEF7 /* SettingViewController.swift */,
+				5B64CF6024AB09870074FEF7 /* SettingViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,6 +585,7 @@
 		5B64CF5F24AB08410074FEF7 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CF6424AB0D300074FEF7 /* SettingCoordinator.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -743,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B64CF2424A591CF0074FEF7 /* NewsDetailViewController.storyboard in Resources */,
+				5B64CF6124AB09870074FEF7 /* SettingViewController.storyboard in Resources */,
 				5B1A491A249C4FDA00F0BFDF /* MainViewController.storyboard in Resources */,
 				5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */,
 				5BC3DFC024AA294A00BEDBEF /* BookmarkViewController.storyboard in Resources */,
@@ -942,12 +955,14 @@
 				5BC3DFCF24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift in Sources */,
 				5B64CF1824A58BC10074FEF7 /* UIViewController+StatusBar.swift in Sources */,
 				5B1A4920249C551900F0BFDF /* FirestoreUseCase.swift in Sources */,
+				5B64CF6524AB0D300074FEF7 /* SettingCoordinator.swift in Sources */,
 				5B1A4900249C494500F0BFDF /* ErrorTracker.swift in Sources */,
 				5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */,
 				5BC3DFC224AA295A00BEDBEF /* BookmarkViewController.swift in Sources */,
 				5B64CF1224A57C270074FEF7 /* BorderUIButton.swift in Sources */,
 				5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */,
 				5B1A48FE249C492100F0BFDF /* ActivityIndicator.swift in Sources */,
+				5B64CF6324AB09950074FEF7 /* SettingViewController.swift in Sources */,
 				5B64CF4C24A9C7DF0074FEF7 /* Image.swift in Sources */,
 				5B1A492A249C60D200F0BFDF /* AppFlowCoordinator.swift in Sources */,
 				5B64CF4824A9888A0074FEF7 /* NewsDetailSceneDIContainer.swift in Sources */,
@@ -971,6 +986,7 @@
 				5B1A4915249C4F1B00F0BFDF /* News.swift in Sources */,
 				5B1A4924249C57AF00F0BFDF /* MainViewModel.swift in Sources */,
 				5BF131F624A2116200E1D94B /* RxKolodaDelegateProxy.swift in Sources */,
+				5B64CF6724AB0E4F0074FEF7 /* SettingSceneDIContainer.swift in Sources */,
 				5B1A48F8249C48A100F0BFDF /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
