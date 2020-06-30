@@ -18,6 +18,19 @@ class BaseViewController: UIViewController {
     deinit {
       log.verbose("DEINIT: \(self.className)")
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if #available(iOS 13, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
+    }
 
     // MARK: Rx
     var disposeBag = DisposeBag()

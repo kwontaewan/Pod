@@ -70,7 +70,6 @@ class MainViewController: BaseViewController, StoryboardInstantiable {
     }
     
     private func initView() {
-        self.setNeedsStatusBarAppearanceUpdate()
 
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -211,15 +210,7 @@ extension MainViewController: KolodaViewDelegate {
         animation?.springSpeed = frameAnimationSpringSpeed
         return animation
     }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        if #available(iOS 13, *) {
-            return .darkContent
-        } else {
-            return .default
-        }
-    }
-        
+            
 }
 
 // MARK: KolodaViewDataSource

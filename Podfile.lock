@@ -180,6 +180,9 @@ PODS:
   - Firebase/Firestore (6.21.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.11.2)
+  - Firebase/Messaging (6.21.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 4.3.0)
   - FirebaseAnalytics (6.4.0):
     - FirebaseCore (~> 6.6)
     - FirebaseInstallations (~> 1.1)
@@ -189,6 +192,7 @@ PODS:
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (= 0.3.9011)
+  - FirebaseAnalyticsInterop (1.5.0)
   - FirebaseAuth (6.5.1):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.6)
@@ -225,6 +229,20 @@ PODS:
     - FirebaseCore (~> 6.6)
     - GoogleUtilities/UserDefaults (~> 6.5)
     - PromisesObjC (~> 1.2)
+  - FirebaseInstanceID (4.3.4):
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstallations (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/UserDefaults (~> 6.5)
+  - FirebaseMessaging (4.3.1):
+    - FirebaseAnalyticsInterop (~> 1.5)
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstanceID (~> 4.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.5)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Reachability (~> 6.5)
+    - GoogleUtilities/UserDefaults (~> 6.5)
+    - Protobuf (>= 3.9.2, ~> 3.9)
   - GoogleAppMeasurement (6.4.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -284,6 +302,7 @@ PODS:
   - Nimble (8.0.7)
   - pop (1.0.12)
   - PromisesObjC (1.2.8)
+  - Protobuf (3.12.0)
   - Quick (2.2.0)
   - Realm (5.1.0):
     - Realm/Headers (= 5.1.0)
@@ -330,6 +349,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
+  - Firebase/Messaging
   - Kingfisher
   - Koloda
   - Nimble
@@ -355,6 +375,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
     - FirebaseAuth
     - FirebaseAuthInterop
     - FirebaseCore
@@ -362,6 +383,8 @@ SPEC REPOS:
     - FirebaseCoreDiagnosticsInterop
     - FirebaseFirestore
     - FirebaseInstallations
+    - FirebaseInstanceID
+    - FirebaseMessaging
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -376,6 +399,7 @@ SPEC REPOS:
     - Nimble
     - pop
     - PromisesObjC
+    - Protobuf
     - Quick
     - Realm
     - RealmSwift
@@ -400,6 +424,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
   FirebaseAnalytics: a1a0b3327ceb5cd5b4bacffdb293f6c909aa087d
+  FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
   FirebaseAuth: a6da11d78dfd956b7f7af3222a0f0b1c93ef8fc9
   FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
   FirebaseCore: 9f495d3afacb7b558711e6218ebb14b1c51b5802
@@ -407,6 +432,8 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
   FirebaseFirestore: 71925e62a5d1cbfaff46aa4d5107e525cc48356a
   FirebaseInstallations: acb3216eb9784d3b1d2d2d635ff74fa892cc0c44
+  FirebaseInstanceID: cef67c4967c7cecb56ea65d8acbb4834825c587b
+  FirebaseMessaging: 828e66eb357a893e3cebd9ee0f6bc1941447cc94
   GoogleAppMeasurement: 6e68a94d0eaeb1d73ef6b0ed4f7334e29d63ae29
   GoogleDataTransport: b29a21d813e906014ca16c00897827e40e4a24ab
   GoogleDataTransportCCTSupport: 6f15a89b0ca35d6fa523e1f752ef818588885988
@@ -421,6 +448,7 @@ SPEC CHECKSUMS:
   Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   Realm: bdea546851e37b4cf0a2400cef115c7c26fda488
   RealmSwift: 70945aa168db93b215c460e9c8ef680261aa28af
@@ -439,6 +467,6 @@ SPEC CHECKSUMS:
   SwiftSoup: f97bc4e988c7729d6457f9642f974c617a6e2510
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
 
-PODFILE CHECKSUM: db64b4e7687f6df0565ba0a50d80f5cc67eef17d
+PODFILE CHECKSUM: cbe31cd6a3be8b1fed67a30cfecc6a97d79e68be
 
 COCOAPODS: 1.9.1
