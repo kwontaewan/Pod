@@ -20,7 +20,7 @@ protocol RealmUseCaseProtocol {
         
 }
 
-final class RealmUseCase<RealmDAO>: RealmUseCaseProtocol where RealmDAO: RealmRepository, RealmDAO.T == News {
+final class RealmUseCase<RealmDAO>: DetectDeinit, RealmUseCaseProtocol where RealmDAO: RealmRepository, RealmDAO.T == News {
     
     private let realmRepositroy: RealmDAO
     
@@ -37,9 +37,12 @@ final class RealmUseCase<RealmDAO>: RealmUseCaseProtocol where RealmDAO: RealmRe
     }
     
     func isBookmark(documentId: String) -> Observable<Bool> {
-        let predicateQuery = NSPredicate(format: "documentID == %s", documentId)
+        let predicateQuery = NSPredicate(format: "documentID == %@", documentId)
         return realmRepositroy.query(with: predicateQuery, sortDescriptors: [])
             .map { (news) -> Bool in
+                
+                log.info(news)
+                
                 if news.count > 0 {
                     return true
                 } else {

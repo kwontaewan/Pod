@@ -104,7 +104,20 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
     }
     
     private func setupRx() {
-        let input = NewsDetailViewModel.Input()
+        
+        let viewDidAppear = rx.viewDidAppear.asDriver()
+        
+        let deleteBookmarkTap = bookmarkButton.rx.tap
+            .filter { [weak self] in
+                return self?.bookmarkButton.isSelected ?? false
+            }.asObservable()
+        
+        let bookmarkTap = bookmarkButton.rx.tap
+            .filter { [weak self] in
+                return !(self?.bookmarkButton.isSelected ?? false)
+            }.asObservable()
+        
+        let input = NewsDetailViewModel.Input(viewDidAppear: viewDidAppear, tapDeleteBookmark: deleteBookmarkTap, tapBookmark: bookmarkTap)
         
         let ouput = viewModel.transform(input: input)
         
@@ -128,10 +141,26 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
                 self?.present(vc, animated: true, completion: nil)
             }).disposed(by: disposeBag)
         
-        bookmarkButton.rx.tap
-        .asDriver()
-            .drive(onNext: { [weak self] (_) in
+        ouput.isBookmark
+            .drive(onNext: { [weak self] (isBookmark) in
+                log.debug(isBookmark)
+                self?.bookmarkButton.isSelected = isBookmark
+            }).disposed(by: disposeBag)
+        
+        ouput.bookmark
+            .subscribe(onNext: { [weak self] (_) in
                 self?.toastView?.showToast(title: "bookmark_info".localized)
+                self?.bookmarkButton.isSelected = true
+            }, onError: { (error) in
+                log.error(error)
+            }).disposed(by: disposeBag)
+        
+        ouput.deleteBookmark
+            .subscribe(onNext: { [weak self] (_) in
+                self?.toastView?.showToast(title: "bookmark_cancel_info".localized)
+                self?.bookmarkButton.isSelected = false
+            }, onError: { (error) in
+                log.error(error)
             }).disposed(by: disposeBag)
         
     }
