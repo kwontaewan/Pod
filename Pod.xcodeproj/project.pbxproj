@@ -339,6 +339,7 @@
 		5B1A48DF249C44A500F0BFDF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CF5D24AB07FE0074FEF7 /* SettingScene */,
 				5BC3DFBB24AA284200BEDBEF /* BookmarkScene */,
 				5B64CF1924A590800074FEF7 /* NewsDetailScene */,
 				5B1A48EB249C466900F0BFDF /* MainScene */,
@@ -550,6 +551,29 @@
 			isa = PBXGroup;
 			children = (
 				5B64CF1D24A591900074FEF7 /* NewsDetailCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		5B64CF5D24AB07FE0074FEF7 /* SettingScene */ = {
+			isa = PBXGroup;
+			children = (
+				5B64CF5F24AB08410074FEF7 /* Flow */,
+				5B64CF5E24AB08380074FEF7 /* View */,
+			);
+			path = SettingScene;
+			sourceTree = "<group>";
+		};
+		5B64CF5E24AB08380074FEF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B64CF5F24AB08410074FEF7 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Flow;
 			sourceTree = "<group>";
