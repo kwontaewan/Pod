@@ -31,6 +31,7 @@ extension UIViewController {
             appearance.configureWithDefaultBackground()
             appearance.shadowColor = nil
             appearance.backgroundColor = .white
+            appearance.titleTextAttributes =  [NSAttributedString.Key.foregroundColor: UIColor.black]
             self.navigationController?.navigationBar.isTranslucent = false
             self.navigationController?.navigationBar.standardAppearance = appearance
             self.navigationController?.navigationBar.scrollEdgeAppearance = appearance

@@ -25,7 +25,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wCt-4K-Jvg">
                                 <rect key="frame" x="0.0" y="59" width="414" height="803"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BookmarkCell" rowHeight="100" id="Afc-Of-Ga9" customClass="BookmarkCell" customModule="Pod" customModuleProvider="target">
@@ -87,6 +87,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="B0v-Go-G6v" secondAttribute="trailing" constant="16" id="tPy-sE-1yz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="linkLabel" destination="IIu-qf-d48" id="kiH-mW-Vl8"/>
                                             <outlet property="newsImageView" destination="J0K-VE-YHA" id="2xL-in-AQC"/>
@@ -96,7 +97,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hgj-SW-zCB" firstAttribute="leading" secondItem="FX8-bE-x3q" secondAttribute="leading" id="CEE-cg-oZh"/>
                             <constraint firstItem="wCt-4K-Jvg" firstAttribute="top" secondItem="Hgj-SW-zCB" secondAttribute="bottom" constant="14" id="DH2-T0-KPo"/>

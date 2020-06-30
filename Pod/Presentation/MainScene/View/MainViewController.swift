@@ -211,6 +211,14 @@ extension MainViewController: KolodaViewDelegate {
         animation?.springSpeed = frameAnimationSpringSpeed
         return animation
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if #available(iOS 13, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
+    }
         
 }
 

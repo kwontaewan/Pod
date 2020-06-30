@@ -48,6 +48,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabarController = UITabBarController()
         
+        if #available(iOS 13.0, *) {
+            let appearance = tabarController.tabBar.standardAppearance
+            appearance.shadowImage = nil
+            appearance.shadowColor = nil
+            appearance.backgroundColor = .white
+            tabarController.tabBar.standardAppearance = appearance
+        } else {
+            tabarController.tabBar.barTintColor = .white
+            tabarController.tabBar.shadowImage = UIImage()
+            tabarController.tabBar.backgroundImage = UIImage()
+        }
+                
         tabarController.viewControllers = [
             mainNavigaitonController,
             bookmarkNavigaitonController
