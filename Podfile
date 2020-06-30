@@ -43,6 +43,7 @@ target 'Pod' do
   #UI
   pod "Koloda"
   pod 'SnapKit', '~> 5.0.0'
+  pod 'PanModal'
   
   target 'PodTests' do
     inherit! :search_paths
