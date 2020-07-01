@@ -15,7 +15,7 @@ protocol NewsDetailCoordinatorDependencies {
         news: News
     ) -> NewsDetailViewController
     
-    func makeShowCommentViewController() -> CommentViewController
+    func makeShowCommentViewController(news: News) -> CommentViewController
     
 }
 
@@ -23,7 +23,7 @@ protocol NewsDetailFlowCoordinator {
     
     func start(news: News, viewType: ViewType?)
     
-    func showCommentView()
+    func showCommentView(news: News)
     
 }
 
@@ -48,8 +48,8 @@ class DefaultNewsDetailFlowCoordinator: DetectDeinit, NewsDetailFlowCoordinator 
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func showCommentView() {
-        let vc = dependencies.makeShowCommentViewController()
+    func showCommentView(news: News) {
+        let vc = dependencies.makeShowCommentViewController(news: news)
         navigationController?.visibleViewController?.presentPanModal(vc)
      }
     

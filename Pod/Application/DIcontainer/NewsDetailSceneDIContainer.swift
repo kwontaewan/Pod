@@ -50,8 +50,15 @@ final class NewsDetailSceneDIContainer {
     }
     
     // MARK: - Comment
-    func makeShowCommentViewController() -> CommentViewController {
-        return CommentViewController.create()
+    func makeShowCommentViewController(news: News) -> CommentViewController {
+        return CommentViewController.create(with: makeCommentViewModel(news: news))
+    }
+
+    func makeCommentViewModel(news: News) -> CommentViewModel {
+        return CommentViewModel(
+            news: news,
+            firebaseUseCases: makeFirestoreUseCase()
+        )
     }
     
     // MARK: - Flow Coordinators

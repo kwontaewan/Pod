@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             guard let user = authResult?.user else { return }
             _ = user.isAnonymous  // true
             let uid = user.uid
-            log.info("uid \(uid)")
+            UserDefaultsManagement.setUserAuth(auth: uid)
         }
         
         return true

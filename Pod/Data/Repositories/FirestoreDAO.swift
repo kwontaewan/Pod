@@ -31,4 +31,35 @@ final class FirestoreDAO: DetectDeinit, FirestoreRepository {
             .getDocuments()
     }
     
+    func registerComment(
+        documentId: String,
+        authKey: String,
+        contents: String
+    ) -> Observable<Void> {
+        return db.collection("feed")
+            .document(documentId)
+            .collection("comments")
+            .document()
+            .rx
+            .setData(["authKey": authKey, "contents": contents, "regDate": getDateTime()])
+    }
+    
+    func fetchComments(documentId: String) -> Observable<QuerySnapshot> {
+        return db.collection("feed")
+            .document(documentId)
+            .collection("comments")
+            .order(by: "regDate", descending: true)
+            .rx
+            .getDocuments()
+    }
+    
+    func getDateTime() -> String {
+          let now = Date()
+          let date = DateFormatter()
+          date.locale = Locale(identifier: "ko_kr")
+          date.timeZone = TimeZone(abbreviation: "KST")
+          date.dateFormat = "yyyy-MM-dd HH:mm:ss"
+          return date.string(from: now)
+      }
+    
 }

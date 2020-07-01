@@ -22,4 +22,8 @@ class Image {
         return UIImage(named: "ic_bookmark")!
     }
     
+    class var emptyCommentTableView: UIImage {
+        return UIImage(named: "ic_empty_commnet")!
+    }
+    
 }

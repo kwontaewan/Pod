@@ -1,5 +1,5 @@
 //
-//  CommnetViewModel.swift
+//  Comment.swift
 //  Pod
 //
 //  Created by Gunter on 2020/07/01.
@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct Comment {
+    let authKey: String
+    
+    let contents: String
+    
+    let regDate: String
+}

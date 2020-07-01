@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 import PanModal
 
 class CommentViewController: BaseViewController, StoryboardInstantiable {
@@ -19,23 +21,94 @@ class CommentViewController: BaseViewController, StoryboardInstantiable {
         
     @IBOutlet weak var commentTextFieldBottomConstraint: NSLayoutConstraint!
     
-    var viewType: ViewType?
+    private var activityView: UIActivityIndicatorView!
     
-    static func create() -> CommentViewController {
+    private var viewModel: CommentViewModel!
+        
+    static func create(with viewModel: CommentViewModel) -> CommentViewController {
         let view = CommentViewController.instantiateViewController()
+        view.viewModel = viewModel
         return view
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        setupRx()
         initKeyboardEvent()
     }
+    
+     override func viewDidLayoutSubviews() {
+         super.viewDidLayoutSubviews()
+    
+         activityView.center = CGPoint(
+            x: self.view.frame.size.width / 2,
+            y: 480 / 2
+         )
+         
+         self.view.addSubview(activityView)
+     }
         
     private func initView() {
-        tableView.delegate = self
-        tableView.dataSource = self
+        activityView = UIActivityIndicatorView(style: .gray)
         tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    private func setupRx() {
+        assert(viewModel != nil)
+        
+        let viewDidAppear = rx.viewDidAppear
+            .take(1)
+            .map { _ in () }
+            .asDriverOnErrorJustComplete()
+        
+        let shouldReturn = commentTextField
+            .rx
+            .shouldReturn
+            .do(onNext: { [weak self] (_) in
+                self?.activityView.startAnimating()
+            })
+        
+        let text = commentTextField.rx.text.orEmpty
+        
+        let registerComment = shouldReturn.withLatestFrom(text).asDriverOnErrorJustComplete()
+
+        let input = CommentViewModel.Input(
+            viewDidAppear: viewDidAppear,
+            registerComment: registerComment
+        )
+        
+        let output = viewModel.transform(input: input)
+        
+        output.registerComplete
+            .drive(onNext: { [weak self] (_) in
+                self?.commentTextField.endEditing(true)
+                self?.commentTextField.text = ""
+                self?.activityView.stopAnimating()
+            }).disposed(by: disposeBag)
+        
+        output.comments
+            .do(onNext: { [weak self] (comments) in
+                
+                let count = comments.count
+                
+                if count <= 0 {
+                    self?.tableView.setEmptyView(image: Image.emptyCommentTableView)
+                } else {
+                    self?.tableView.restoreCell()
+                }
+                
+                self?.commentCountLabel.text = "댓글 \(count)개"
+            }).drive(
+                tableView.rx.items(
+                    cellIdentifier: CommentCell.reuseIdentifier,
+                    cellType: CommentCell.self
+            )
+        ) { _, model, cell in
+            cell.contentsLabel.text = model.contents
+            cell.timeAgoLabel.text = model.registerAgo
+        }.disposed(by: disposeBag)
+        
     }
     
     func initKeyboardEvent() {
@@ -76,31 +149,6 @@ class CommentViewController: BaseViewController, StoryboardInstantiable {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
-    }
-    
-}
-
-extension CommentViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CommentCell.reuseIdentifier, for: indexPath) as? CommentCell else {
-            return UITableViewCell()
-        }
-        
-        cell.contentsLabel.text = "asdfas"
-        
-        return cell
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return UITableView.automaticDimension
     }
     
 }

@@ -83,8 +83,8 @@ final class NewsDetailViewModel: DetectDeinit, ViewModelType {
             }
         
         let tapComment = input.tapComment
-            .do(onNext: { [weak self] (_) in
-                self?.coordinator.showCommentView()
+            .do(onNext: { [unowned self] (_) in
+                self.coordinator.showCommentView(news: self.news)
             })
         
         return Output(news: news, isBookmark: isBookmark, bookmark: bookmark, deleteBookmark: deleteBookmark, tapComment: tapComment)

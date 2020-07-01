@@ -24,7 +24,6 @@
 		5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4901249C496100F0BFDF /* Observable+Ext.swift */; };
 		5B1A4904249C498000F0BFDF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A4903249C498000F0BFDF /* BaseViewController.swift */; };
 		5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5B1A4905249C49A600F0BFDF /* .swiftlint.yml */; };
-		5B1A4909249C4D4400F0BFDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B1A4908249C4D4300F0BFDF /* GoogleService-Info.plist */; };
 		5B1A490B249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A490A249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift */; };
 		5B1A490D249C4E0500F0BFDF /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A490C249C4E0500F0BFDF /* ModelType.swift */; };
 		5B1A490F249C4E1600F0BFDF /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A490E249C4E1600F0BFDF /* ViewModelType.swift */; };
@@ -67,7 +66,7 @@
 		5B92442D24AC4E9100E58FDC /* CommentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B92442C24AC4E9100E58FDC /* CommentViewController.storyboard */; };
 		5B92442F24AC4E9C00E58FDC /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92442E24AC4E9C00E58FDC /* CommentViewController.swift */; };
 		5B92443324AC532600E58FDC /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92443224AC532600E58FDC /* CommentCell.swift */; };
-		5B92443524AC6FE100E58FDC /* CommnetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92443424AC6FE100E58FDC /* CommnetViewModel.swift */; };
+		5B92443524AC6FE100E58FDC /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92443424AC6FE100E58FDC /* CommentViewModel.swift */; };
 		5BC3DFBA24AA155A00BEDBEF /* RealmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */; };
 		5BC3DFC024AA294A00BEDBEF /* BookmarkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */; };
 		5BC3DFC224AA295A00BEDBEF /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFC124AA295900BEDBEF /* BookmarkViewController.swift */; };
@@ -78,6 +77,13 @@
 		5BC3DFCF24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFCE24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift */; };
 		5BC3DFD124AA348900BEDBEF /* BookmarkListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFD024AA348900BEDBEF /* BookmarkListItemViewModel.swift */; };
 		5BC3DFD324AB6E9C00BEDBEF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFD224AB6E9C00BEDBEF /* Utility.swift */; };
+		5BC3DFDF24ACB58F00BEDBEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BC3DFDE24ACB58F00BEDBEF /* GoogleService-Info.plist */; };
+		5BC3DFE124ACC0BD00BEDBEF /* RxTextFieldDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFE024ACC0BD00BEDBEF /* RxTextFieldDelegateProxy.swift */; };
+		5BC3DFE324ACC11C00BEDBEF /* UITextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFE224ACC11C00BEDBEF /* UITextField+Rx.swift */; };
+		5BC3DFE524ACC68200BEDBEF /* CommentResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFE424ACC68200BEDBEF /* CommentResponseDTO+Mapping.swift */; };
+		5BC3DFE724ACC6F600BEDBEF /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFE624ACC6F600BEDBEF /* Comment.swift */; };
+		5BC3DFE924ACC86C00BEDBEF /* CommentListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFE824ACC86C00BEDBEF /* CommentListItemViewModel.swift */; };
+		5BC3DFEF24ACD87500BEDBEF /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFEE24ACD87500BEDBEF /* UITableView.swift */; };
 		5BF131E824A192E700E1D94B /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E724A192E700E1D94B /* TagCell.swift */; };
 		5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131E924A1A21500E1D94B /* UIView+Ext.swift */; };
 		5BF131EC24A1A28300E1D94B /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF131EB24A1A28300E1D94B /* NewsCardView.swift */; };
@@ -135,7 +141,6 @@
 		5B1A4901249C496100F0BFDF /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		5B1A4903249C498000F0BFDF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5B1A4905249C49A600F0BFDF /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		5B1A4908249C4D4300F0BFDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B1A490A249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TagResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
 		5B1A490C249C4E0500F0BFDF /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		5B1A490E249C4E1600F0BFDF /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -179,7 +184,7 @@
 		5B92442C24AC4E9100E58FDC /* CommentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommentViewController.storyboard; sourceTree = "<group>"; };
 		5B92442E24AC4E9C00E58FDC /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		5B92443224AC532600E58FDC /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		5B92443424AC6FE100E58FDC /* CommnetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommnetViewModel.swift; sourceTree = "<group>"; };
+		5B92443424AC6FE100E58FDC /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUseCase.swift; sourceTree = "<group>"; };
 		5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookmarkViewController.storyboard; sourceTree = "<group>"; };
 		5BC3DFC124AA295900BEDBEF /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +195,13 @@
 		5BC3DFCE24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkSceneDIContainer.swift; sourceTree = "<group>"; };
 		5BC3DFD024AA348900BEDBEF /* BookmarkListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListItemViewModel.swift; sourceTree = "<group>"; };
 		5BC3DFD224AB6E9C00BEDBEF /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		5BC3DFDE24ACB58F00BEDBEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5BC3DFE024ACC0BD00BEDBEF /* RxTextFieldDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTextFieldDelegateProxy.swift; sourceTree = "<group>"; };
+		5BC3DFE224ACC11C00BEDBEF /* UITextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Rx.swift"; sourceTree = "<group>"; };
+		5BC3DFE424ACC68200BEDBEF /* CommentResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommentResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		5BC3DFE624ACC6F600BEDBEF /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5BC3DFE824ACC86C00BEDBEF /* CommentListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListItemViewModel.swift; sourceTree = "<group>"; };
+		5BC3DFEE24ACD87500BEDBEF /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		5BF131E724A192E700E1D94B /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		5BF131E924A1A21500E1D94B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		5BF131EB24A1A28300E1D94B /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
@@ -286,7 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				5B6AA33324A2D8190075EAB8 /* Pod.entitlements */,
-				5B1A4908249C4D4300F0BFDF /* GoogleService-Info.plist */,
+				5BC3DFDE24ACB58F00BEDBEF /* GoogleService-Info.plist */,
 				5B1A48E0249C44AF00F0BFDF /* Application */,
 				5B1A48DF249C44A500F0BFDF /* Presentation */,
 				5B1A48DE249C449D00F0BFDF /* Domain */,
@@ -384,6 +396,7 @@
 			children = (
 				5B1A490A249C4DDE00F0BFDF /* TagResponseDTO+Mapping.swift */,
 				5B1A4912249C4ECC00F0BFDF /* NewsResponseDTO+Mapping.swift */,
+				5BC3DFE424ACC68200BEDBEF /* CommentResponseDTO+Mapping.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -428,6 +441,7 @@
 				5B1A4910249C4E9F00F0BFDF /* Tag.swift */,
 				5B1A4914249C4F1B00F0BFDF /* News.swift */,
 				5B64CF4D24A9D52A0074FEF7 /* Bookmark.swift */,
+				5BC3DFE624ACC6F600BEDBEF /* Comment.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -518,6 +532,9 @@
 				5B64CF5524A9E1FA0074FEF7 /* RunLoopThreadScheduler.swift */,
 				5BC3DFCC24AA2AC500BEDBEF /* BorderUIImageView.swift */,
 				5BC3DFD224AB6E9C00BEDBEF /* Utility.swift */,
+				5BC3DFE024ACC0BD00BEDBEF /* RxTextFieldDelegateProxy.swift */,
+				5BC3DFE224ACC11C00BEDBEF /* UITextField+Rx.swift */,
+				5BC3DFEE24ACD87500BEDBEF /* UITableView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -616,7 +633,8 @@
 		5B92443024AC4F0C00E58FDC /* Comment */ = {
 			isa = PBXGroup;
 			children = (
-				5B92443424AC6FE100E58FDC /* CommnetViewModel.swift */,
+				5B92443424AC6FE100E58FDC /* CommentViewModel.swift */,
+				5BC3DFE824ACC86C00BEDBEF /* CommentListItemViewModel.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -793,12 +811,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC3DFDF24ACB58F00BEDBEF /* GoogleService-Info.plist in Resources */,
 				5B64CF2424A591CF0074FEF7 /* NewsDetailViewController.storyboard in Resources */,
 				5B64CF6124AB09870074FEF7 /* SettingViewController.storyboard in Resources */,
 				5B1A491A249C4FDA00F0BFDF /* MainViewController.storyboard in Resources */,
 				5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */,
 				5BC3DFC024AA294A00BEDBEF /* BookmarkViewController.storyboard in Resources */,
-				5B1A4909249C4D4400F0BFDF /* GoogleService-Info.plist in Resources */,
 				5B92442D24AC4E9100E58FDC /* CommentViewController.storyboard in Resources */,
 				5BF131FC24A2326300E1D94B /* Localizable.strings in Resources */,
 				5B1A48B8249C3C3A00F0BFDF /* LaunchScreen.storyboard in Resources */,
@@ -971,9 +989,12 @@
 				5BF131E824A192E700E1D94B /* TagCell.swift in Sources */,
 				5B1A48FA249C48DA00F0BFDF /* UIImageView+Kingfisher.swift in Sources */,
 				5B1A48FC249C490B00F0BFDF /* DetectDeinit.swift in Sources */,
+				5BC3DFEF24ACD87500BEDBEF /* UITableView.swift in Sources */,
 				5B1A4913249C4ECC00F0BFDF /* NewsResponseDTO+Mapping.swift in Sources */,
 				5B1A4904249C498000F0BFDF /* BaseViewController.swift in Sources */,
 				5B1A491C249C527600F0BFDF /* FirestoreRepository.swift in Sources */,
+				5BC3DFE924ACC86C00BEDBEF /* CommentListItemViewModel.swift in Sources */,
+				5BC3DFE524ACC68200BEDBEF /* CommentResponseDTO+Mapping.swift in Sources */,
 				5B1A4922249C574B00F0BFDF /* MainFlowCoordinator.swift in Sources */,
 				5B92442F24AC4E9C00E58FDC /* CommentViewController.swift in Sources */,
 				5B1A48F4249C479E00F0BFDF /* Alertable.swift in Sources */,
@@ -992,7 +1013,7 @@
 				5B64CF5024A9D6460074FEF7 /* RealmRepository.swift in Sources */,
 				5BC3DFBA24AA155A00BEDBEF /* RealmUseCase.swift in Sources */,
 				5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */,
-				5B92443524AC6FE100E58FDC /* CommnetViewModel.swift in Sources */,
+				5B92443524AC6FE100E58FDC /* CommentViewModel.swift in Sources */,
 				5B64CF4E24A9D52A0074FEF7 /* Bookmark.swift in Sources */,
 				5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */,
 				5BC3DFCF24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift in Sources */,
@@ -1005,10 +1026,12 @@
 				5B64CF1224A57C270074FEF7 /* BorderUIButton.swift in Sources */,
 				5BF131EA24A1A21500E1D94B /* UIView+Ext.swift in Sources */,
 				5B1A48FE249C492100F0BFDF /* ActivityIndicator.swift in Sources */,
+				5BC3DFE324ACC11C00BEDBEF /* UITextField+Rx.swift in Sources */,
 				5B64CF6324AB09950074FEF7 /* SettingViewController.swift in Sources */,
 				5B64CF4C24A9C7DF0074FEF7 /* Image.swift in Sources */,
 				5B1A492A249C60D200F0BFDF /* AppFlowCoordinator.swift in Sources */,
 				5B64CF4824A9888A0074FEF7 /* NewsDetailSceneDIContainer.swift in Sources */,
+				5BC3DFE724ACC6F600BEDBEF /* Comment.swift in Sources */,
 				5B64CF5224A9DBF30074FEF7 /* Realm+Ext.swift in Sources */,
 				5B1A48F6249C47B500F0BFDF /* StoryboardInstantiable.swift in Sources */,
 				5B64CF2224A591C70074FEF7 /* NewsDetailViewController.swift in Sources */,
@@ -1030,6 +1053,7 @@
 				5B1A4915249C4F1B00F0BFDF /* News.swift in Sources */,
 				5B1A4924249C57AF00F0BFDF /* MainViewModel.swift in Sources */,
 				5BF131F624A2116200E1D94B /* RxKolodaDelegateProxy.swift in Sources */,
+				5BC3DFE124ACC0BD00BEDBEF /* RxTextFieldDelegateProxy.swift in Sources */,
 				5B64CF6724AB0E4F0074FEF7 /* SettingSceneDIContainer.swift in Sources */,
 				5B1A48F8249C48A100F0BFDF /* UIColor.swift in Sources */,
 			);
