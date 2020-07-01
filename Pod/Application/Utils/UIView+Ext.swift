@@ -20,4 +20,13 @@ extension UIView {
         return view
     }
     
+    class var insetSafeAreaBottom: CGFloat {
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.keyWindow?.rootViewController?.view.safeAreaInsets.bottom ?? 0
+        }
+        else {
+            return 0
+        }
+    }
+    
 }

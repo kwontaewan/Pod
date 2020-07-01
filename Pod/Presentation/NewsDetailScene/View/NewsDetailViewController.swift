@@ -36,6 +36,8 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
     
     private var viewModel: NewsDetailViewModel!
     
+    private var isCommentView = false
+    
     var viewType: ViewType?
     
     static func create(with viewModel: NewsDetailViewModel) -> NewsDetailViewController {
@@ -52,11 +54,12 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        isCommentView = false
     }
         
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if let viewType = viewType, viewType == .main {
+        if let viewType = viewType, viewType == .main, !isCommentView {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
          }
     }
@@ -71,7 +74,7 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
             make.bottom.equalTo(self.bottomNavigationView.snp.top).offset(-12)
         })
         
-        if let viewType = viewType, viewType == .main {
+        if let viewType = viewType, viewType == .main, !isCommentView {
             self.navigationController?.setNavigationBarHidden(false, animated: true)
         }
         
@@ -118,7 +121,18 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
                 return !(self?.bookmarkButton.isSelected ?? false)
             }.asObservable()
         
-        let input = NewsDetailViewModel.Input(viewDidAppear: viewDidAppear, tapDeleteBookmark: deleteBookmarkTap, tapBookmark: bookmarkTap)
+        let commentTap = commentButton.rx.tap
+            .do(onNext: { [weak self] _ in
+                self?.isCommentView = true
+            })
+            .asDriverOnErrorJustComplete()
+        
+        let input = NewsDetailViewModel.Input(
+            viewDidAppear: viewDidAppear,
+            tapDeleteBookmark: deleteBookmarkTap,
+            tapBookmark: bookmarkTap,
+            tapComment: commentTap
+        )
         
         let ouput = viewModel.transform(input: input)
         
@@ -163,6 +177,10 @@ class NewsDetailViewController: BaseViewController, StoryboardInstantiable, Aler
             }, onError: { (error) in
                 log.error(error)
             }).disposed(by: disposeBag)
+        
+        ouput.tapComment
+            .drive()
+            .disposed(by: disposeBag)
         
     }
     

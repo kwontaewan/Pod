@@ -38,7 +38,7 @@ class BookmarkViewController: BaseViewController, StoryboardInstantiable {
         assert( viewModel != nil )
         
         let viewDidAppear = rx.viewDidAppear.asDriver()
-        
+                
         let input = BookmarkViewModel.Input(viewDidAppaer: viewDidAppear)
         
         let output = viewModel.transform(input: input)

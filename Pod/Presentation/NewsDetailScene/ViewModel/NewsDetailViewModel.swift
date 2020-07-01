@@ -19,6 +19,8 @@ final class NewsDetailViewModel: DetectDeinit, ViewModelType {
         let tapDeleteBookmark: Observable<Void>
         
         let tapBookmark: Observable<Void>
+        
+        let tapComment: Driver<Void>
    
     }
     
@@ -32,6 +34,8 @@ final class NewsDetailViewModel: DetectDeinit, ViewModelType {
         
         let deleteBookmark: Observable<Void>
         
+        let tapComment: Driver<Void>
+        
     }
     
     private let news: News
@@ -40,14 +44,18 @@ final class NewsDetailViewModel: DetectDeinit, ViewModelType {
     
     private let realmUseCases: RealmUseCaseProtocol
     
+    private let coordinator: NewsDetailFlowCoordinator
+    
     init(
         news: News,
         realmUseCases: RealmUseCaseProtocol,
-        firestoreUseCases: FirestoreUseCaseProtocol
+        firestoreUseCases: FirestoreUseCaseProtocol,
+        coordinator: NewsDetailFlowCoordinator
     ) {
         self.news = news
         self.realmUseCases = realmUseCases
         self.firestoreUseCases = firestoreUseCases
+        self.coordinator = coordinator
     }
     
     func transform(input: Input) -> Output {
@@ -74,7 +82,12 @@ final class NewsDetailViewModel: DetectDeinit, ViewModelType {
                 
             }
         
-        return Output(news: news, isBookmark: isBookmark, bookmark: bookmark, deleteBookmark: deleteBookmark)
+        let tapComment = input.tapComment
+            .do(onNext: { [weak self] (_) in
+                self?.coordinator.showCommentView()
+            })
+        
+        return Output(news: news, isBookmark: isBookmark, bookmark: bookmark, deleteBookmark: deleteBookmark, tapComment: tapComment)
     }
     
 }

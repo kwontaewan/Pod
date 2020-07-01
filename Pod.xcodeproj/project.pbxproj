@@ -64,6 +64,10 @@
 		5B64CF6324AB09950074FEF7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF6224AB09950074FEF7 /* SettingViewController.swift */; };
 		5B64CF6524AB0D300074FEF7 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF6424AB0D300074FEF7 /* SettingCoordinator.swift */; };
 		5B64CF6724AB0E4F0074FEF7 /* SettingSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CF6624AB0E4F0074FEF7 /* SettingSceneDIContainer.swift */; };
+		5B92442D24AC4E9100E58FDC /* CommentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B92442C24AC4E9100E58FDC /* CommentViewController.storyboard */; };
+		5B92442F24AC4E9C00E58FDC /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92442E24AC4E9C00E58FDC /* CommentViewController.swift */; };
+		5B92443324AC532600E58FDC /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92443224AC532600E58FDC /* CommentCell.swift */; };
+		5B92443524AC6FE100E58FDC /* CommnetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92443424AC6FE100E58FDC /* CommnetViewModel.swift */; };
 		5BC3DFBA24AA155A00BEDBEF /* RealmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */; };
 		5BC3DFC024AA294A00BEDBEF /* BookmarkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */; };
 		5BC3DFC224AA295A00BEDBEF /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3DFC124AA295900BEDBEF /* BookmarkViewController.swift */; };
@@ -172,6 +176,10 @@
 		5B64CF6424AB0D300074FEF7 /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		5B64CF6624AB0E4F0074FEF7 /* SettingSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSceneDIContainer.swift; sourceTree = "<group>"; };
 		5B6AA33324A2D8190075EAB8 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
+		5B92442C24AC4E9100E58FDC /* CommentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommentViewController.storyboard; sourceTree = "<group>"; };
+		5B92442E24AC4E9C00E58FDC /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		5B92443224AC532600E58FDC /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		5B92443424AC6FE100E58FDC /* CommnetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommnetViewModel.swift; sourceTree = "<group>"; };
 		5BC3DFB924AA155A00BEDBEF /* RealmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUseCase.swift; sourceTree = "<group>"; };
 		5BC3DFBF24AA294A00BEDBEF /* BookmarkViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookmarkViewController.storyboard; sourceTree = "<group>"; };
 		5BC3DFC124AA295900BEDBEF /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -545,6 +553,7 @@
 		5B64CF1A24A5908D0074FEF7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B92442B24AC4E7E00E58FDC /* Comment */,
 				5B64CF2124A591C70074FEF7 /* NewsDetailViewController.swift */,
 				5B64CF2324A591CF0074FEF7 /* NewsDetailViewController.storyboard */,
 			);
@@ -554,6 +563,7 @@
 		5B64CF1B24A590930074FEF7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5B92443024AC4F0C00E58FDC /* Comment */,
 				5B64CF1F24A591A00074FEF7 /* NewsDetailViewModel.swift */,
 			);
 			path = ViewModel;
@@ -591,6 +601,32 @@
 				5B64CF6424AB0D300074FEF7 /* SettingCoordinator.swift */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		5B92442B24AC4E7E00E58FDC /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				5B92443124AC530B00E58FDC /* Cells */,
+				5B92442C24AC4E9100E58FDC /* CommentViewController.storyboard */,
+				5B92442E24AC4E9C00E58FDC /* CommentViewController.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		5B92443024AC4F0C00E58FDC /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				5B92443424AC6FE100E58FDC /* CommnetViewModel.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		5B92443124AC530B00E58FDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B92443224AC532600E58FDC /* CommentCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		5BC3DFBB24AA284200BEDBEF /* BookmarkScene */ = {
@@ -763,6 +799,7 @@
 				5B1A4906249C49A600F0BFDF /* .swiftlint.yml in Resources */,
 				5BC3DFC024AA294A00BEDBEF /* BookmarkViewController.storyboard in Resources */,
 				5B1A4909249C4D4400F0BFDF /* GoogleService-Info.plist in Resources */,
+				5B92442D24AC4E9100E58FDC /* CommentViewController.storyboard in Resources */,
 				5BF131FC24A2326300E1D94B /* Localizable.strings in Resources */,
 				5B1A48B8249C3C3A00F0BFDF /* LaunchScreen.storyboard in Resources */,
 				5B1A48B5249C3C3A00F0BFDF /* Assets.xcassets in Resources */,
@@ -929,6 +966,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B92443324AC532600E58FDC /* CommentCell.swift in Sources */,
 				5B64CF2024A591A00074FEF7 /* NewsDetailViewModel.swift in Sources */,
 				5BF131E824A192E700E1D94B /* TagCell.swift in Sources */,
 				5B1A48FA249C48DA00F0BFDF /* UIImageView+Kingfisher.swift in Sources */,
@@ -937,6 +975,7 @@
 				5B1A4904249C498000F0BFDF /* BaseViewController.swift in Sources */,
 				5B1A491C249C527600F0BFDF /* FirestoreRepository.swift in Sources */,
 				5B1A4922249C574B00F0BFDF /* MainFlowCoordinator.swift in Sources */,
+				5B92442F24AC4E9C00E58FDC /* CommentViewController.swift in Sources */,
 				5B1A48F4249C479E00F0BFDF /* Alertable.swift in Sources */,
 				5BC3DFCD24AA2AC500BEDBEF /* BorderUIImageView.swift in Sources */,
 				5BF131FA24A231CB00E1D94B /* String+Ext.swift in Sources */,
@@ -953,6 +992,7 @@
 				5B64CF5024A9D6460074FEF7 /* RealmRepository.swift in Sources */,
 				5BC3DFBA24AA155A00BEDBEF /* RealmUseCase.swift in Sources */,
 				5B1A4902249C496100F0BFDF /* Observable+Ext.swift in Sources */,
+				5B92443524AC6FE100E58FDC /* CommnetViewModel.swift in Sources */,
 				5B64CF4E24A9D52A0074FEF7 /* Bookmark.swift in Sources */,
 				5B64CF5424A9E19A0074FEF7 /* RealmDAO.swift in Sources */,
 				5BC3DFCF24AA2D9D00BEDBEF /* BookmarkSceneDIContainer.swift in Sources */,

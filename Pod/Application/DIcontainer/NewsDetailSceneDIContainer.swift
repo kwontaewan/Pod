@@ -33,17 +33,25 @@ final class NewsDetailSceneDIContainer {
     }
     
     // MARK: - NewsDetail
-    func makeNewsDetailViewController(news: News) -> NewsDetailViewController {
-        return NewsDetailViewController.create(with: makeNewsDetailViewModel(news: news))
+    func makeNewsDetailViewController(coordinator: NewsDetailFlowCoordinator, news: News) -> NewsDetailViewController {
+        return NewsDetailViewController.create(with: makeNewsDetailViewModel(coordinator: coordinator, news: news))
     }
     
     func makeNewsDetailViewModel(
+        coordinator: NewsDetailFlowCoordinator,
         news: News
     ) -> NewsDetailViewModel {
         return NewsDetailViewModel(
             news: news,
             realmUseCases: makeRealmUseCase(),
-            firestoreUseCases: makeFirestoreUseCase())
+            firestoreUseCases: makeFirestoreUseCase(),
+            coordinator: coordinator
+        )
+    }
+    
+    // MARK: - Comment
+    func makeShowCommentViewController() -> CommentViewController {
+        return CommentViewController.create()
     }
     
     // MARK: - Flow Coordinators
