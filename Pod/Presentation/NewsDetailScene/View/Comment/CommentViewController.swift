@@ -52,6 +52,7 @@ class CommentViewController: BaseViewController, StoryboardInstantiable {
     private func initView() {
         activityView = UIActivityIndicatorView(style: .gray)
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.backgroundColor = .white
     }
     
     private func setupRx() {
