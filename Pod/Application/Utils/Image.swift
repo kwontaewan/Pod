@@ -26,4 +26,28 @@ class Image {
         return UIImage(named: "ic_empty_commnet")!
     }
     
+    class var tabBookmarkOff: UIImage {
+        return UIImage(named: "ic_bookmark_off")!
+    }
+    
+    class var tabBookmarkOn: UIImage {
+        return UIImage(named: "ic_bookmark_on")!
+    }
+    
+    class var tabHomeOff: UIImage {
+        return UIImage(named: "ic_home_off")!
+    }
+    
+    class var tabHomeOn: UIImage {
+        return UIImage(named: "ic_home_on")!
+    }
+    
+    class var tabSettingOff: UIImage {
+        return UIImage(named: "ic_setting_off")!
+    }
+    
+    class var tabSettingOn: UIImage {
+        return UIImage(named: "ic_setting_on")!
+    }
+    
 }

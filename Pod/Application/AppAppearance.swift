@@ -15,6 +15,8 @@ final class AppAppearance {
         UINavigationBar.appearance().barTintColor = .white
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UITabBar.appearance().tintColor = .black
+        UITabBar.appearance().backgroundColor = .white
     }
 }
 

@@ -49,21 +49,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settingNavigationController = UINavigationController()
         
         mainNavigaitonController.tabBarItem = UITabBarItem(
-            title: "Main",
-            image: nil,
-            selectedImage: nil
+            title: "",
+            image: Image.tabHomeOff,
+            selectedImage: Image.tabHomeOn
         )
         
         bookmarkNavigaitonController.tabBarItem = UITabBarItem(
-            title: "Bookmark",
-            image: nil,
-            selectedImage: nil
+            title: "",
+            image: Image.tabBookmarkOff,
+            selectedImage: Image.tabBookmarkOn
         )
         
         settingNavigationController.tabBarItem = UITabBarItem(
-            title: "Setting",
-            image: nil,
-            selectedImage: nil
+            title: "",
+            image: Image.tabSettingOff,
+            selectedImage: Image.tabSettingOn
         )
         
         appFlowCoordinator = AppFlowCoordinator(
